@@ -1,2 +1,2 @@
 'user strict';
-console.log(document.querySelector('h1').textContent);
+console.log(document.querySelector('.message').textContent);
