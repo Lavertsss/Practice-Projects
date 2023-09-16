@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+html { 
+    background-color: rgb(35, 31, 229);
+}
+
+html, body {
+    overscroll-behavior: contain;
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+  }
+
+#navigation-bar {
+    display: block;
+    padding-right: 50px;
+    padding-left: 50px;
+    background-color: white;
+    height: max-content;
+    text-align: right;
+    align-items: center;
+    
+}
+a.navigation-items {
+    display: inline-block;
+    text-align: right;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: 20px;
+    color: black;
+}
+
+.a:hover {
+    color: yellow;
+    transition-duration: 500ms;
+    
+}
+
+#homepage {
+    display: block;
+    width: 100%;
+    font-size: 100px;
+    color: yellow;
+    text-align: left;
+}
+
+h1.homepage-title {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    user-select: none;
+    line-height: 300px;
+    margin-left: 25px;
+}
+
+h1.homepage-title:hover {
+    color: rgb(162, 255, 0);
+    transition-timing-function: ease-in;
+    transform: translateX(-5%);
+    text-shadow: black 5px 5px;
+    transition-duration: 500ms;    
+}
