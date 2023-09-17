@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 
 html { 
-    background-color: rgb(35, 31, 229);
+    background-color: rgb(0, 0, 0);
 }
 
 html, body {
@@ -29,38 +29,45 @@ a.navigation-items {
     display: inline-block;
     text-align: right;
     text-decoration: none;
-    font-size: 15px;
+    font-size: calc(15px + 0.5vw);
     font-weight: 700;
     margin-left: 20px;
     color: black;
 }
 
-.a:hover {
-    color: yellow;
-    transition-duration: 500ms;
+a.navigation-items:hover {
+    transition-duration: 200ms;
     
 }
 
 #homepage {
     display: block;
     width: 100%;
-    font-size: 100px;
-    color: yellow;
+    font-size: 250px;
+    color: rgb(255, 255, 255);
     text-align: left;
+    background-color: black;
 }
 
 h1.homepage-title {
+    font-size: calc(25px + 5vw);
     margin-top: 0px;
     margin-bottom: 0px;
     user-select: none;
-    line-height: 300px;
-    margin-left: 25px;
+    line-height: calc(100px + 20vh);
+    text-shadow: rgb(46, 46, 46) 5px 5px;
+    text-align: center;
 }
 
-h1.homepage-title:hover {
-    color: rgb(162, 255, 0);
-    transition-timing-function: ease-in;
-    transform: translateX(-5%);
-    text-shadow: black 5px 5px;
-    transition-duration: 500ms;    
+h1.homepage-title:active {
+    transition-timing-function:linear;
+    transition-duration: 5000ms;
+    transition-delay: 500ms;
+    animation: fly-away 2s ease;
+}
+
+
+@keyframes fly-away {
+    0%{transform: translateX(0px); }
+    100% {transform: translateX(-2000px); }
 }
