@@ -31,13 +31,16 @@ a.navigation-items {
     text-decoration: none;
     font-size: calc(15px + 0.5vw);
     font-weight: 700;
-    margin-left: 20px;
     color: black;
+    background-color: white;
+    border-radius: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 a.navigation-items:hover {
     transition-duration: 200ms;
-    
+    filter: invert(1);
 }
 
 #homepage {
@@ -86,10 +89,8 @@ h1.homepage-title:active {
 #weird-page {
     background-color: white;
     font-family: 'Poppins', sans-serif;
-    z-index: -1;
     user-select: none;
     min-height: 70vh;
-    pointer-events: none;
 }
 
 h1.weird-title {
@@ -107,10 +108,10 @@ h1.weird-title {
 
 .weird-info{
     font-size: calc(10px + 1vw);
-    text-align: left;
+    text-align:start;
     max-width: 100vw;
     float: right;
-    z-index: 2;
+    z-index: 1;
 }
 
 #weird-picture {
@@ -121,11 +122,19 @@ h1.weird-title {
     margin-right: 30px;
     transform: translateY(-50px);
     text-wrap: wrap;
-    pointer-events: auto;
     user-select: auto;
+    color: white;
+    opacity: 1;
+    filter: grayscale(1);
+    position: relative;
 }
 
-h1.weird-title:hover {
+#weird-picture:hover {
+filter: grayscale(0);
+transition-duration: 300ms;
+}
+
+#weird-picture:hover > h1.weird-title {
     color: yellow;
     transition-duration: 500ms;
 }
@@ -188,7 +197,7 @@ h1.weird-title:hover {
     right: 0%;
     width: 20vw;
     text-align: justify;
-    padding-left: 15px;
+    padding-left: 10px;
     text-wrap: nowrap;
     min-height: max-content;
 }
@@ -200,6 +209,7 @@ h1.weird-title:hover {
     margin-bottom: 25px;
     text-decoration: none;
     color: white;
+    text-wrap: nowrap;
 }
 
 .sidebar-item:hover {
@@ -208,9 +218,15 @@ h1.weird-title:hover {
     transition-duration: 100ms;
 }
 
+.sidebar-picture {
+    height: max-content;
+    width: 20vw;
+    margin-bottom: 10px;
+}
+
 #newsletter-topics {
     display: flex;
-    font-size: 1vw;
+    font-size: 1.5vw;
     text-align: justify;
     justify-content: space-between;
     margin-left: 100px;
@@ -228,10 +244,10 @@ a.newsletter-topics-nav:hover {
 }
 
 .newsletter-content {
-    font-size: calc(10px + 1vw);
+    font-size: calc(10px + .5vw);
     padding-top: 50px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
     text-align: justify;
     color: rgba(255, 255, 255, 0.75);
     line-height: 50px;
@@ -275,12 +291,13 @@ a.newsletter-topics-nav:hover {
     }
 
     #weird-picture {
-        position: absolute;
+        /* position: absolute;
         right: 10%;
         border: 2px black solid;
         transform:translateY(-70px);
         height: 20vw;
-        margin-left: 20px;
+        margin-left: 20px; */
+        display: none;
     }
 
     #newsletter-title {
@@ -292,7 +309,37 @@ a.newsletter-topics-nav:hover {
     }
 
     a.newsletter-topics-nav {
-        font-size: 2vw;
+        font-size: 2.5vw;
         padding-bottom: 10px;
+        margin-left: 5px
+    }
+
+    #newsletter-topics {
+        margin-left: 0px;
+        margin-right: 0px ;
+        padding-right: 70vw;
+        text-wrap: nowrap;
+    }
+
+    .newsletter-content {
+        line-height: 20px;
+        text-indent: 10px;
+        padding-top: 15px;
+    }
+
+    .sidebar-picture {
+        display: none;
+    }
+
+    #sidebar {
+        transform: translateY(25px);
+        padding-left: 1px;
+        height: min-content;
+    }
+
+    .sidebar-item {
+        font-size: 10px;
+        text-wrap: wrap;
+        text-align: left;
     }
 }

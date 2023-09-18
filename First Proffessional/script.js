@@ -5,3 +5,5 @@
 //   const weirdpicture = document.getElementById("weirdpicture");
 //   weirdpicture.style.display = none;
 // });
+
+window.addEventListener("contextmenu", (e) => e.preventDefault());
