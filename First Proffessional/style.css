@@ -97,6 +97,8 @@ h1.weird-title {
     font-size: calc(15px + 5vw);
     padding-top: 25px;
     margin: 0px;
+    position: relative;
+    user-select: auto;
 }
 
 #weird-container {
@@ -120,9 +122,10 @@ h1.weird-title {
     transform: translateY(-50px);
     text-wrap: wrap;
     pointer-events: auto;
+    user-select: auto;
 }
 
-#weird-picture:hover ~ .weird-title{
+h1.weird-title:hover {
     color: yellow;
     transition-duration: 500ms;
 }
@@ -157,11 +160,52 @@ h1.weird-title {
     padding-right: 100vw;
 }
 
+#news-wrapper {
+    flex-direction: row;
+    display: flex;
+    text-emphasis: right;
+    
+}
+
 #news-container {
     display: flex;
-    max-width: 70vw;
+    max-width: 80vw;
     text-align: left;
     flex-direction: column;
+    width: max-content; 
+    padding-top: 0px;
+}
+
+.related-topics-sidebar {
+    display: flex;
+    text-wrap: nowrap;
+    font-size: 2vw;
+    margin-bottom: 40px;
+}
+
+#sidebar {
+    border: 1px solid white;
+    right: 0%;
+    width: 20vw;
+    text-align: justify;
+    padding-left: 15px;
+    text-wrap: nowrap;
+    min-height: max-content;
+}
+
+
+.sidebar-item {
+    border-bottom:1px white solid;
+    display: block;
+    margin-bottom: 25px;
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar-item:hover {
+    padding-left: 10px;
+    color: red;
+    transition-duration: 100ms;
 }
 
 #newsletter-topics {
@@ -191,6 +235,8 @@ a.newsletter-topics-nav:hover {
     text-align: justify;
     color: rgba(255, 255, 255, 0.75);
     line-height: 50px;
+    border-top: 0.5px solid white;
+    text-indent: 40px;
 }
 
 
