@@ -60,14 +60,14 @@ h1.homepage-title {
     line-height: calc(100px + 20vh);
     text-shadow: rgb(46, 46, 46) 5px 5px;
     text-align: center;
+    transition-duration: 1000ms;
+    transition-timing-function:ease-out;
 }
 
 h1.homepage-title:active {
-    transition-timing-function:linear;
     transition-duration: 5000ms;
     transition-delay: 500ms;
-    animation: fly-away 2s ease;
-}
+    animation: fly-away 2s ease;    }
 
 #two-description {
     display: flex;
@@ -93,13 +93,31 @@ h1.homepage-title:active {
     min-height: 70vh;
 }
 
-h1.weird-title {
+.weird-title {
     color: black;
     font-size: calc(15px + 5vw);
     padding-top: 25px;
     margin: 0px;
     position: relative;
     user-select: auto;
+    display: inline-flex;
+}
+
+.weird-title-d {
+    color: black;
+    font-size: calc(15px + 5vw);
+    padding-top: 25px;
+    margin: 0px;
+    position: relative;
+    user-select: auto;
+    display: inline-flex;
+}
+
+#weird-page:hover .weird-title-d{
+    /* transform: rotate(360deg); */
+    transition-duration: 500ms;
+    transition-timing-function: ease-out;
+    animation: d-shake 1000ms;
 }
 
 #weird-container {
@@ -127,11 +145,14 @@ h1.weird-title {
     opacity: 1;
     filter: grayscale(1);
     position: relative;
+    display: flex;
+    float: right;
+    transition-duration: 250ms;
 }
 
 #weird-picture:hover {
 filter: grayscale(0);
-transition-duration: 300ms;
+transition-duration: 1000ms;
 }
 
 #weird-picture:hover > h1.weird-title {
@@ -145,7 +166,7 @@ transition-duration: 300ms;
     font-family: 'Playfair Display', serif;
     color: white;
     min-height: 100vh;
-    overflow-x: hidden  ;
+    overflow-x: hidden;
 }
 
 #newsletter-title {
@@ -172,7 +193,6 @@ transition-duration: 300ms;
 #news-wrapper {
     flex-direction: row;
     display: flex;
-    text-emphasis: right;
     
 }
 
@@ -252,13 +272,19 @@ a.newsletter-topics-nav:hover {
     color: rgba(255, 255, 255, 0.75);
     line-height: 50px;
     border-top: 0.5px solid white;
-    text-indent: 40px;
+    border-bottom: 0.5px solid white;
 }
 
 
 @keyframes fly-away {
     0%{transform: translateX(0px); }
     100% {transform: translateX(-2000px); }
+}
+
+@keyframes d-shake {
+    0%{transform: translateY(0px); }
+    55%{transform: translateY(-10px);}
+    75%{transform: translateY(20px);}
 }
 
 @media only screen and (max-width: 1000px) {
@@ -280,7 +306,12 @@ a.newsletter-topics-nav:hover {
     }
 
     .weird-title {
-        padding: 10px;
+        padding-left: 10px;
+        padding-right: 0px;
+    }
+    .weird-title-d {
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
     .weird-info {
