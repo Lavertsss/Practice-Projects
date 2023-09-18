@@ -339,6 +339,10 @@ a.newsletter-topics-nav:hover {
         padding: 0px;
     }
 
+    #newsletter-page:hover #newsletter-title{
+        padding-right: inherit;
+    }
+
     a.newsletter-topics-nav {
         font-size: 2.5vw;
         padding-bottom: 10px;
@@ -356,6 +360,7 @@ a.newsletter-topics-nav:hover {
         line-height: 20px;
         text-indent: 10px;
         padding-top: 15px;
+        border-right: 0.5px solid white;
     }
 
     .sidebar-picture {
@@ -363,7 +368,7 @@ a.newsletter-topics-nav:hover {
     }
 
     #sidebar {
-        transform: translateY(25px);
+        transform: translateY(35px);
         padding-left: 1px;
         height: min-content;
     }
