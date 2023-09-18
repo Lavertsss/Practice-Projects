@@ -6,4 +6,4 @@
 //   weirdpicture.style.display = none;
 // });
 
-window.addEventListener("contextmenu", (e) => e.preventDefault());
+// window.addEventListener("contextmenu", (e) => e.preventDefault());
