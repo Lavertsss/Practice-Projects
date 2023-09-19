@@ -275,106 +275,69 @@ a.newsletter-topics-nav:hover {
     border-bottom: 0.5px solid white;
 }
 
-/* #picturesque {
-    background-image: url(https://raw.githubusercontent.com/Lavertsss/Assets/main/stevenbrule.png);
-    position: absolute;
-    background-repeat: no-repeat;
-    background-size: cover;     
-    height: 100vh;
-    width: 100vw;
-    max-height: 100vh;
-}
-
-#options-container {
+#magazine-page {
+    min-height: 100vh;
+    background: radial-gradient(#b8b8b8, #4d4d4d);
+    display: block;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     position: relative;
-    display: flex;
-    background-color: black;
 }
 
-#picture-option-1 {
-    display: inline-block;
-    min-width: 50vw;
-    min-height: 100vh;
-    background-color: yellow;
-    font-size: 100px;
-    transition-duration: 500ms;
-
-}
-
-#picture-option-2 {
-    display: inline-block;
-    min-width: 50vw;
-    min-height: 100vh;
-    background-color: yellow;
-    font-size: 100px;
-    transition-duration: 500ms;
-    
-}
-
-#picture-option-1:hover {
-    transform: perspective( 20000px ) rotateY( -25deg ) translateX(35px);;
-    transition-duration: 1000ms;
-    transition-delay: 400ms;
-}
-
-#picture-option-1:hover .option-1-text {
-    line-height: 40vh;
-    transition-duration: 500ms;
-}
-
-#picture-option-1:hover #option-explanation-div {
+#magazine-title-wrapper {
     display: block;
+    color: yellow;
+    max-width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    text-wrap: nowrap;
 }
 
-#picture-option-2:hover {
-    transform: perspective( 20000px ) rotateY( 25deg ) translateX(-35px);
-    transition-duration: 1000ms;
-    transition-delay: 400ms;
-}
-
-#picture-option-2:hover .option-2-text {
-
-    line-height: 40vh;
-    transition-duration: 500ms;
-}
-
-.option-1-text {
-    display: block;
+.magazine-title {
     text-align: center;
-    line-height: 100vh;
-    text-decoration: none;
-    color: black;
+    font-size: 5vw;
 }
 
-.option-2-text {
+#magazine-text-wrapper {
+    display:flex;
+    flex-direction: column;
+    max-width: 20vw;
+    margin-left: 10vw;
+    text-align: left;
+}
+
+.magazine-subtitle {
+    color: yellow;
+    font-weight: bold;
+}
+
+.magazine-subtitle-text {
+    margin-top: 0px;
+    margin-bottom: 25px;
+    color: white;
+    font-weight: normal;
+}
+
+#footer-section {
     display: block;
-    text-align: center;
-    line-height: 100vh;
-    text-decoration: none;
-    color: black;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.541);
+    height: 10vh;
+    max-height: 10vh;
+    width: 100vw;
+    bottom: 0px;
 }
 
-#option-explanation-div {
-    display: none;
-    font-size: 50px;
-    line-height: 50px;
+@media only screen and (max-width:600px) {
+
+
+#magazine-text-wrapper {
+    max-width: 100vw;
 }
 
-.option-explantion {
-    display: flex;
-    font-size: 150px;
-    margin: 0px;
-} */
-
-@keyframes fly-away {
-    0%{transform: translateX(0px); }
-    100% {transform: translateX(-2000px); }
+.magazine-title {
+    font-size: 15vw;
 }
-
-@keyframes d-shake {
-    0%{transform: translateY(0px); }
-    55%{transform: translateY(-10px);}
-    75%{transform: translateY(20px);}
 }
 
 @media only screen and (max-width: 1000px) {
@@ -492,3 +455,104 @@ a.newsletter-topics-nav:hover {
     }
 
 }
+
+@keyframes fly-away {
+    0%{transform: translateX(0px); }
+    100% {transform: translateX(-2000px); }
+}
+
+@keyframes d-shake {
+    0%{transform: translateY(0px); }
+    55%{transform: translateY(-10px);}
+    75%{transform: translateY(20px);}
+}
+/* #picturesque {
+    background-image: url(https://raw.githubusercontent.com/Lavertsss/Assets/main/stevenbrule.png);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;     
+    height: 100vh;
+    width: 100vw;
+    max-height: 100vh;
+}
+
+#options-container {
+    position: relative;
+    display: flex;
+    background-color: black;
+}
+
+#picture-option-1 {
+    display: inline-block;
+    min-width: 50vw;
+    min-height: 100vh;
+    background-color: yellow;
+    font-size: 100px;
+    transition-duration: 500ms;
+
+}
+
+#picture-option-2 {
+    display: inline-block;
+    min-width: 50vw;
+    min-height: 100vh;
+    background-color: yellow;
+    font-size: 100px;
+    transition-duration: 500ms;
+    
+}
+
+#picture-option-1:hover {
+    transform: perspective( 20000px ) rotateY( -25deg ) translateX(35px);;
+    transition-duration: 1000ms;
+    transition-delay: 400ms;
+}
+
+#picture-option-1:hover .option-1-text {
+    line-height: 40vh;
+    transition-duration: 500ms;
+}
+
+#picture-option-1:hover #option-explanation-div {
+    display: block;
+}
+
+#picture-option-2:hover {
+    transform: perspective( 20000px ) rotateY( 25deg ) translateX(-35px);
+    transition-duration: 1000ms;
+    transition-delay: 400ms;
+}
+
+#picture-option-2:hover .option-2-text {
+
+    line-height: 40vh;
+    transition-duration: 500ms;
+}
+
+.option-1-text {
+    display: block;
+    text-align: center;
+    line-height: 100vh;
+    text-decoration: none;
+    color: black;
+}
+
+.option-2-text {
+    display: block;
+    text-align: center;
+    line-height: 100vh;
+    text-decoration: none;
+    color: black;
+}
+
+#option-explanation-div {
+    display: none;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.option-explantion {
+    display: flex;
+    font-size: 150px;
+    margin: 0px;
+} */
