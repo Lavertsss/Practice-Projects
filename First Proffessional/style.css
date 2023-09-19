@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Playfair+Display&family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Freehand&family=Oswald:wght@300&family=Playfair+Display&family=Poppins:wght@500&display=swap');
 
 html { 
     background-color: rgba(0,0, 0, 1);
@@ -65,7 +65,7 @@ h1.homepage-title {
 }
 
 h1.homepage-title:hover {
-    transform: perspective( 600px ) rotateY( 180deg );
+    transform: perspective( 400px ) rotateY( 180deg );
 }
 
 #two-description {
@@ -275,14 +275,14 @@ a.newsletter-topics-nav:hover {
     border-bottom: 0.5px solid white;
 }
 
-#picturesque {
-    /* background-image: url(https://raw.githubusercontent.com/Lavertsss/Assets/main/stevenbrule.png);
+/* #picturesque {
+    background-image: url(https://raw.githubusercontent.com/Lavertsss/Assets/main/stevenbrule.png);
     position: absolute;
     background-repeat: no-repeat;
-    background-size: cover;     */
+    background-size: cover;     
     height: 100vh;
     width: 100vw;
- 
+    max-height: 100vh;
 }
 
 #options-container {
@@ -298,6 +298,7 @@ a.newsletter-topics-nav:hover {
     background-color: yellow;
     font-size: 100px;
     transition-duration: 500ms;
+
 }
 
 #picture-option-2 {
@@ -307,31 +308,63 @@ a.newsletter-topics-nav:hover {
     background-color: yellow;
     font-size: 100px;
     transition-duration: 500ms;
+    
+}
+
+#picture-option-1:hover {
+    transform: perspective( 20000px ) rotateY( -25deg ) translateX(35px);;
+    transition-duration: 1000ms;
+    transition-delay: 400ms;
+}
+
+#picture-option-1:hover .option-1-text {
+    line-height: 40vh;
+    transition-duration: 500ms;
+}
+
+#picture-option-1:hover #option-explanation-div {
+    display: block;
+}
+
+#picture-option-2:hover {
+    transform: perspective( 20000px ) rotateY( 25deg ) translateX(-35px);
+    transition-duration: 1000ms;
+    transition-delay: 400ms;
+}
+
+#picture-option-2:hover .option-2-text {
+
+    line-height: 40vh;
+    transition-duration: 500ms;
 }
 
 .option-1-text {
     display: block;
     text-align: center;
     line-height: 100vh;
+    text-decoration: none;
+    color: black;
 }
 
 .option-2-text {
     display: block;
     text-align: center;
     line-height: 100vh;
+    text-decoration: none;
+    color: black;
 }
 
-#picture-option-1:hover {
-    transform: perspective( 20000px ) rotateY( -25deg );
-    transition-duration: 1000ms;
-    transition-delay: 150ms;
+#option-explanation-div {
+    display: none;
+    font-size: 50px;
+    line-height: 50px;
 }
 
-#picture-option-2:hover {
-    transform: perspective( 20000px ) rotateY( 25deg );
-    transition-duration: 1000ms;
-    transition-delay: 150ms;
-}
+.option-explantion {
+    display: flex;
+    font-size: 150px;
+    margin: 0px;
+} */
 
 @keyframes fly-away {
     0%{transform: translateX(0px); }
