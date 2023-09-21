@@ -495,10 +495,6 @@ a.newsletter-topics-nav:hover {
     font-size: 2vh;
 }
 
-#magazine-image-overlay {
-    filter: brightness(50)%;
-}
-
 #magazine-main-image {
     height: 100vh;
     position: absolute;
