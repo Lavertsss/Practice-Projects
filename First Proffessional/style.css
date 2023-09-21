@@ -275,6 +275,7 @@ transition-duration: 1000ms;
     justify-content: space-between;
     margin-left: 100px;
     margin-right: 100px;
+    max-width: 100vw;
     }
 
 a.newsletter-topics-nav {
@@ -316,7 +317,7 @@ a.newsletter-topics-nav:hover {
     font-weight: bold;
     text-wrap: nowrap;
     transition-duration: 200ms;
-    z-index: 1;
+    z-index: 0;
     position: relative;
 }
 
@@ -327,7 +328,7 @@ a.newsletter-topics-nav:hover {
 
 .magazine-title {
     text-align: center;
-    font-size: 5vw;
+    font-size: 7vw;
     transition-duration: 300ms;
     margin-bottom: 2vh;
     
@@ -354,7 +355,7 @@ a.newsletter-topics-nav:hover {
 #magazine-text-wrapper:hover {
     transition-duration: 500ms;
     transform: scale(1.10);
-    text-shadow: 2px 2px black;
+    text-shadow: 1px 1px black;
     z-index: 1;
 }
 
@@ -377,7 +378,7 @@ a.newsletter-topics-nav:hover {
 #magazine-text-wrapper-right:hover {
     transition-duration: 500ms;
     transform:scale(1.10);
-    text-shadow: 2px 2px black;
+    text-shadow: 1px 1px black;
     z-index: 1;}
 
 .magazine-subtitle {
@@ -402,7 +403,7 @@ a.newsletter-topics-nav:hover {
     text-align: right;
     font-size: 1.65vh;
     margin-bottom: 1vh;
-    margin-top: 1vh;
+    margin-top: 5vh;
     transition-duration: 250ms;
     z-index: 1;
     position: relative;
@@ -445,36 +446,57 @@ a.newsletter-topics-nav:hover {
 }
 
 #magazine-text-wrapper-opaque-right:hover .magazine-subtitle{
-    color: rgb(255, 255, 86);
+    color: rgb(255, 255, 123);
+}
+
+.magazine-bottom-title {
+    text-align: center;
+    font-size: 1.5vh;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    margin-top: 10vh;
+    font-weight: 300;
+}
+
+.magazine-bottom-subtitle {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 5vh;
+    margin-top: 0px;
 }
 
 #footer-section {
-    display: block;
+    display: flex;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.75);
     height: max-content ;
-    width: 100vw;
+    width: 70vw;
     bottom: 0px;
     transition-duration: 250ms;
     z-index: 1;
 }
 
-#footer-section:hover {
-    background-color: rgba(0, 0, 0, 0.858);
+.footer-text:hover {
     transition-duration: 500ms;
+    color: rgb(255, 253, 152);
 }
 
 
 .footer-text {
     color: white;
     text-align: left;
-    max-width: 70vw;
+    max-width: 30vw;
     margin-left: auto;
     margin-right: auto;
-    text-align: justify;
     text-align-last: center;
     width: 100%;
     font-size: 2vh;
+}
+
+#magazine-image-overlay {
+    filter: brightness(50)%;
 }
 
 #magazine-main-image {
@@ -489,8 +511,30 @@ a.newsletter-topics-nav:hover {
     margin-left: auto;
     margin-right: auto;
     z-index: 0;
-    filter: grayscale(2);
+    filter: grayscale(2) brightness(70%);
 }
+
+#barcode-image-container {
+    display: flex;
+    align-content: flex-end;
+    max-width: 100vw;
+    height: 10vh;
+    max-height: 20vh    ;
+    z-index: 1;
+    position: relative; 
+}
+
+#barcode-image {
+    margin-right: 0vw;
+    margin-left: auto;
+    
+    padding-right: 10vw;
+}
+
+
+
+
+
 
 
 @media only screen and (max-width:600px) {
@@ -503,8 +547,9 @@ a.newsletter-topics-nav:hover {
     font-size: 2.25vw;
 }
 
+
 #magazine-text-wrapper {
-    max-width: 40vw;
+    max-width: 32.5vw;
     font-size: 20vh;
     margin-left: 2.5vw;
     margin-bottom: 2vh;
@@ -523,15 +568,26 @@ a.newsletter-topics-nav:hover {
 }
 
 #magazine-text-wrapper-right {
-    max-width: 40vw;
+    max-width: 32.5vw;
     font-size: 20vh;
     margin-right: 2.5vw;
     margin-bottom: 2vh;
 }
 
+#magazine-title-wrapper {
+    width: 100vw;
+    max-width: 100vw;
+    font-size: 20vw;
+}
+
 .magazine-title {
-    font-size: 15vw;
+    font-size: 100%;
     margin-bottom: 8vh;
+}
+
+.magazine-bottom-subtitle {
+    max-width: 100vw;
+    font-size: 7vw;
 }
 
 .footer-text {
@@ -554,15 +610,27 @@ a.newsletter-topics-nav:hover {
 #magazine-text-wrapper-opaque {
     display: inline-block;
     font-size: 1.8vw; 
-    padding-left: 10vw; 
-    max-width: 35vw;
+    padding-left: 5vw; 
+    max-width: 40vw;
 }
 
 #magazine-text-wrapper-opaque-right {        
     font-size: 1.8vw;
     max-width: 35vw;
 }
+
+#barcode-image {
+    max-width: 30vw;
+    max-height: 5vh;
 }
+
+
+}
+
+
+
+
+
 
 @media only screen and (max-width: 1000px) {
     #two-description {
