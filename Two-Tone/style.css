@@ -1,0 +1,43 @@
+html{
+   font-family: 'Outfit', sans-serif; 
+}
+
+body{
+    scroll-behavior: smooth;
+    margin: 1px;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* BACKGROUND PANELS */
+#background{
+    display: block;
+    width: 100%;
+    position: absolute;
+}
+
+#panel1{
+display: inline-block;    
+background-color: tan;
+width: 25%;
+min-height: 100vh;
+}
+
+#panel2{
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    min-width: 74.75%;
+    min-height: 100vh;
+
+}
+
+/* PAGE TEXT */
+#pagetext{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    z-index: 1;
+    margin-left: 2rem;
+}
