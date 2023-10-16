@@ -3,6 +3,11 @@ body {
     font-family: 'Outfit', sans-serif;
     margin: 0px;
     animation: fadein 1750ms ease-out;
+    margin: 5px;
+}
+
+#scroll-wrapper::-webkit-scrollbar {
+    display: none;
 }
 
 /* TITLE */
@@ -19,13 +24,25 @@ font-size: 5rem;
 }
 
 /* SCROLL */
-#scroll-wrapper {
-    position: relative;
+#scroll-placer {
     display: block;
     text-align: center;
-    margin-top: 5rem;
-    max-height: 50%;
 }
+
+#scroll-wrapper {
+    position: relative;
+    display:inline-block;
+    margin-top: 7.5rem;
+    height: 250px;
+    overflow:scroll;
+    border: black 10px solid;
+    border-radius: 2rem;
+}
+
+#scroll-container {
+    display: block;
+}
+
 
 .scroll-item {
     font-size: 2rem;
