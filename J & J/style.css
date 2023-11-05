@@ -152,12 +152,10 @@ body {
 
 /* Border */
 .custom-border {
-    bottom: 0;
-    left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
-    transform: rotate(180deg);
+    background-color: white;
 }
 
 .custom-border svg {
@@ -166,10 +164,11 @@ body {
     width: calc(100% + 1.3px);
     /* height: 320px; */
     height: calc(min(1rem + 10vh) calc(max(1rem + 20vh)));
+
 }
 
 .custom-border .shape-fill {
-    fill: #FFFFFF;
+    fill: rgb(248, 103, 176);
 }
 
 @keyframes wave-bob {
