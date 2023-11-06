@@ -124,7 +124,7 @@ body {
     padding-top: calc(min(2rem + 10vh));
     padding-left: calc(min(5rem + 3vw));
     padding-bottom: calc(min(.5rem + 2vh));
-    width: 50vw;
+    width: 60vw;
     background-color: rgb(248, 103, 176);
 }
 
@@ -140,7 +140,7 @@ body {
     font-weight: 800;
     font-style: bold;
     color: white;
-    line-height: auto;
+    line-height: min(2rem + 1vw);
     white-space: wrap;
     margin: 50px 0px;
 }
@@ -150,8 +150,10 @@ body {
     position: relative;
     padding-top: calc(min(10rem + 10vh));
     padding-left: calc(min(5rem + 3vw));
+    margin-right: calc(min(1rem + 3vw));
     color: white;
-    animation: wave-bob 5s linear infinite;
+    animation: wave-bob 1400ms linear infinite;
+    background-color: rgb(248, 103, 176);
 }
 
 
@@ -179,10 +181,16 @@ body {
 }
 
 @keyframes wave-bob {
-    0% {transform: translateY(0px);}
-    33% {transform: translateY(-5px);}
-    66% {transform: translateY(5px);}
-    99% {transform: translateY(0px)};
+    /* 0% {transform: translateY(0px);}
+    45% {transform: translateY(-5px);}
+    90% {transform: translateY(5px);}
+    100% {transform: translateY(0px)}; */
+
+    0%{transform: translateY(0px);}
+    25%{transform: translateY(-5px);}
+    50%{transform: translateY(0px);}
+    75% {transform: translateY(5px);}
+    100%{transform: translateY(0px);}
     
 }
 
@@ -327,8 +335,9 @@ body {
     }
 
     .header-text {
-        margin: 30px  10px;
+        margin: 30px  15px;
         font-size: min(.5rem + 2vw);
+        line-height: min(1rem + 1vh);
     }
 
     .header-gif {
