@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(Nert$)</title>
+    <link rel="icon" type="image/x-icon" href="" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+
+  <body>
+    <div id="pictures">
+      <img
+        class="wormhole"
+        src="https://raw.githubusercontent.com/Lavertsss/Images/main/wavyyyyyyy.png"
+        height="100%"
+        width="100%"
+      />
+      <img
+        class="dolphin"
+        src="https://raw.githubusercontent.com/Lavertsss/Assets/main/5ukT.gif"
+        height="100%"
+        width="100%"
+      />
+      <img
+        class="bluelines"
+        src="//openclipart.org/image/2000px/238362"
+        height="100%"
+        width="100%"
+      />
+    </div>
+
+    <div id="passwordwall">
+      <div class="showcase-text">
+        <div class="showcase-slide">
+          <p class="AIS">ALIEN SASQUATCH INVASION</p>
+          <p class="AIS">ALIEN SASQUATCH INVASION</p>
+          <p class="AIS">ALIEN SASQUATCH INVASION</p>
+          <p class="AIS">ALIEN SASQUATCH INVASION</p>
+          <p class="AIS">ALIEN SASQUATCH INVASION</p>
+        </div>
+        <div class="showcase-slide">
+          <p class="AIS">ALIEN SASQUATCH INVASION</p>
+          <p class="AIS">ALIEN SASQUATCH INVASION</p>
+          <p class="AIS">ALIEN SASQUATCH INVASION</p>
+          <p class="AIS">ALIEN SASQUATCH INVASION</p>
+          <p class="AIS">ALIEN SASQUATCH INVASION</p>
+        </div>
+      </div>
+      <p class="passwordTitle">Waiting on password...</p>
+      <div id="passwordform">
+        <input
+          id="userpassword"
+          type="password"
+          style="width: 30vh; height: 2vh"
+          placeholder="Password:"
+          maxlength="3"
+        />
+        <button
+          id="passwordbutton"
+          type="submit"
+          value="141"
+          onclick="passwordenter()"
+        >
+          *
+        </button>
+      </div>
+    </div>
+
+    <div id="page">
+      <div class="bordertext">
+        <div class="notesleft">
+          <h1>Console Commands</h1>
+          <li>typeof : Used to determine the data type</li>
+          <li>let: is block scoped and can be updated but not re-declared</li>
+          <li>
+            const: mantains constant values. They are block scoped and cannot be
+            updated or redeclared
+          </li>
+          <li>
+            var: can be used inside/outside a block and have a scope of the
+            enitre window. Can be updated or re-declared
+          </li>
+          <li>
+            alert() : Creates a notification in the top center of your screen
+          </li>
+          <li>
+            prompt() : Asks a question wit a provided response area that
+            triggers an answer
+          </li>
+          <li>console.log() : prints whatever is stated into the console</li>
+
+          <h1>Data types</h1>
+          <li>
+            Numbers : Used for decimals and integers/floating point numbers
+          </li>
+          <li>String : Sequence of characters used for text</li>
+          <li>Boolean : Logical type that can only be true or false</li>
+          <li>
+            Undefined : Sets a value as a variable but is not yet defined.
+            ex:(let milk;)
+          </li>
+
+          <h1>Number types</h1>
+          <li>Null : both the value and type of value is (null)</li>
+          <li>Symbol : value that is unique and cannot be changed</li>
+          <li>BigInt : Larger integers than the Number type can hold</li>
+        </div>
+        <h1 class="chapterleft">First Steps</h1>
+      </div>
+
+      <div class="bordertext">
+        <div class="notesright">
+          <h1>Comparison Operators</h1>
+          <li>
+            (==) : confirms if the input is only equal to the existing variable
+          </li>
+          <li>
+            (===) :confirms the input is of equal value and equal type to the
+            variable
+          </li>
+          <li>(=!) : confirms if the input is not equal to the variable</li>
+          <li>
+            (==!) : confirms if the input is not of equal value or type to the
+            variable
+          </li>
+          <li>(**&) : multiplies the value by an exponential</li>
+          <li>(/) : gives you the value of the divided numbers</li>
+          <li>
+            (%) : modulus remainder which gives you the value of the remainder
+            of the division
+          </li>
+          <li>
+            (=<) : simple assignment operator which assigns a value to a
+            variable
+          </li>
+          <li>
+            (=+/ =-<) : addition/subtraction assignment adds/subtracts a value
+            to a variable
+          </li>
+
+          <h1>Logic Operators</h1>
+          <li>
+            And : (&&) No matter how many variables, the output will only be
+            true when all values are true
+          </li>
+          <li>
+            Or : (||) The output is true even if only one variable is true
+          </li>
+          <li>Not : (!x) inverts true/false</li>
+        </div>
+        <h1 class="chapterright">Operators</h1>
+      </div>
+
+      <div class="bordertext">
+        <div class="notesleft">
+          <h1>Doohickeys?</h1>
+          <li>
+            ${...} : A template literal. Inserts variables directly into the
+            string
+          </li>
+          <li>Number : Will convert a value into a number value.</li>
+          <li>String : Will convert a value into a string value</li>
+
+          <h1>Boolean values</h1>
+          <li>
+            False Values : Not false initially but are false when converted to a
+            boolean
+          </li>
+          <li>
+            String : Converting an empty string into a boolean will display it
+            as false.
+          </li>
+          <li>
+            String : Converting a complete string into a boolean will display it
+            as true.
+          </li>
+          <li>
+            Number : a number with a value of 0 will be displayed as false or
+            else in an (if/else) statement.
+          </li>
+          <li>
+            Number : a number with a value of ±1 will be displayed as true or if
+            in an (if/else) statement.
+          </li>
+          <li>
+            Defined : if a variable has a valueable, it is defined. If it does
+            not; undefined
+          </li>
+
+          <h1>Conditional Statements and Expressions</h1>
+          <li>
+            switch(letter){case1 "x": console.log(y); break; case2
+            "b"...default:}:
+          </li>
+          <li>
+            ^The switch statement is used to perform different actions based on
+            different conditions.
+          </li>
+          <li>
+            Ternary Operator : a condition followed by a (?), then an expression
+            to execute if the condition is truthy followed by (:),
+          </li>
+          <li>
+            and finally the expression to execute if the condition is falsy. and
+            finally the expression to execute if the condition is falsy.
+          </li>
+        </div>
+        <h1 class="chapterleft">
+          Values <br />
+          Statements <br />
+          Expressions
+        </h1>
+      </div>
+
+      <div class="bordertext">
+        <div class="notesright">
+          <h1>Array Methods</h1>
+          <li>
+            Array literal : Literals represent values in JavaScript. These are
+            fixed values —not variables— that you literally provide in your
+            script
+          </li>
+          <li>
+            Array Indexes : Used to acces a specific array element using an
+            index number
+          </li>
+          <li>length : Returns the length (size) of an array</li>
+          <li>
+            toString() : converts an array to a string of array values (comma
+            seperated)
+          </li>
+          <li>push() : adds elements to the end of an array</li>
+          <li>unshift() : adds elements to the end of an array</li>
+          <li>pop() : will remove the last element of an array</li>
+          <li>
+            appendchild() : appends (adds) a node (element) as the last child of
+            an elemnt
+          </li>
+          <li>
+            indexOf : returns the position of the first occurence of a value in
+            a string, It will be returned as -1 if the value is not found, and
+            is case sensitive
+          </li>
+          <li>
+            includes : will return true if the element is in the arrayt and
+            false if is not
+          </li>
+
+          <h1>Objects</h1>
+          <li>
+            Objects : They are variables, but instead they can contain many
+            values, the values are written as <i>(name:value,)</i> and is
+            seperated by a colon
+          </li>
+          <li>
+            (object).(property) = Dot notation is explicit, can be sued to only
+            acces propterties within <i>This</i> object
+          </li>
+          <li>
+            (object)['property'] = Bracket notation Can put any expression you'd
+            like
+          </li>
+          <li>This variable : equivalent to the object calling the method</li>
+
+          <h1>Loops</h1>
+          <li>for() : for loops keep running while the condition is TRUE</li>
+          <li>
+            Continue : Used to exit the current iteration in a loop (if specific
+            condition occurs) continue to the next one <br />
+            IN a while loop, the condition is tested, and if it's true, the loop
+            will be executed again, In a for loop, the <br />
+            the increment expression is evalualted, and the condition is tested
+            to find out if another iteration should be done
+          </li>
+        </div>
+        <h1 class="chapterright">Methods Objects</h1>
+      </div>
+
+      <div class="bordertext">
+        <div class="notesleft">
+          <h1>DOM</h1>
+          <li>
+            DOM : Document Object Model = Structered representation of HTML
+            Documents. <br />
+            Allows JavaScript to access HTML elements and styles and manipulate
+            them.
+          </li>
+          <h1>Selecting Elements</h1>
+          <li>GetElementByID(' ') : Selects element by it's unique ID</li>
+          <li>
+            GetElementByClassName(' ') : returns all elements of a class name in
+            the order they appear in the document
+          </li>
+          <li>
+            GetElementByTagName(' ') : returns all elements of specified tag
+            names in the order they appear in the document
+          </li>
+          <li>
+            querySelector(' ') : Selects the first item that matches the
+            selector it's given
+          </li>
+          <li>
+            querySelectorAll(' ') : Selects all the items that match the
+            selector it's given
+          </li>
+          <li>createElement('') : creates an element in JS</li>
+
+          <h1>Mouse Events</h1>
+          <li>
+            onmousedown = : actiates on the first stage of a mouse click on an
+            element
+          </li>
+          <li>
+            onmouseup = : activates on the second stage of a mose cick and
+            released oer the same element
+          </li>
+          <li>
+            onclick = : activates on the final(3rd) stage of a mouse click
+          </li>
+          <li>onmouseover = : when the mouse is hovered over an element</li>
+          <li>onmouseout = : when the mouse hovers off of an element</li>
+          <li>onmouseenter = : when the pointer is moved into an element</li>
+          <li>onmouseleave = : when the pointer is moved out of an element</li>
+          <li>
+            oncontextmenu = : activates when the users right clicks an element
+          </li>
+
+          <h1>Page Events</h1>
+          <li>
+            addEventListner() : this method allows you add a variety of events
+            to the same element without overwriting ("click", "mouseover")
+          </li>
+          <li>onload = : occurs when an object has been loaded</li>
+          <li>keydown : registers any keyboard press as a global input</li>
+          <li>
+            onunload = : occurs when a page has been unloaded or is navigated
+            away from. Also triggers when the page is reloaded (as well as the
+            onload)
+          </li>
+        </div>
+        <h1 class="chapterleft">DOM Manipulation</h1>
+      </div>
+    </div>
+  </body>
+</html>

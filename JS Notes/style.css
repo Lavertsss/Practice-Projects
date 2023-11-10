@@ -1,0 +1,384 @@
+@import url("https://fonts.googleapis.com/css2?family=Redacted&family=Rubik+Mono+One&family=Staatliches&display=swap");
+ 
+ html{
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+  }
+
+  html, body {
+    margin:0px;
+    scroll-behavior: smooth;
+    overscroll-behavior: contain;
+  }
+
+#passwordwall {
+    position: fixed;
+    display: block;
+    height: 120%;
+    width: 101%;
+    z-index: 10;
+    background-color: rgb(241, 131, 182);
+    text-align: center;
+    user-select: none;
+    overflow: hidden;
+  }
+
+.passwordTitle {
+    font-family: 'Staatliches', cursive;
+    color: white;
+    margin-top: 22.5vh;
+    font-size: 4rem;
+}
+
+.passwordTitle:hover {
+    color: rgba(0, 0, 0, 0.719);
+    cursor: default;
+    transition-timing-function: 2s ease-in-out;
+}
+
+#passwordform {
+    display: inline-block;
+    justify-content: center;
+}
+
+#userpassword {
+    border: 10px solid white;
+    border-radius: 25px;
+}
+
+#passwordbutton{
+    background-color: white;
+    border-radius: 50px;
+    border: 0px solid white;
+    height: 20px;
+    width: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+/* SHOWCASE TEXT */
+.showcase-text {
+    overflow: hidden;
+    padding: 20px 0;
+    white-space: nowrap;
+    position: relative;
+}
+
+.showcase-slide {
+    animation: textflow 10s infinite linear;    
+    display: inline-flex;
+}
+
+.showcase-slide p {
+    margin: 0 60px;
+}
+
+.AIS {
+    font-size: 4rem;
+    font-family: 'Staatliches', cursive;
+    color: rgb(255, 255, 255);
+}
+
+.AIS:hover {
+    color: white;
+}
+
+@keyframes textflow {
+    /* 100% { transform: translate(-100%, 0);} */
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#page {
+    display: none;
+    padding-top: 10vh;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+.bordertext {
+    border: 15px solid rgba(241, 131, 182, .70);
+    border-radius: 125px;
+    background: rgba(255, 255, 255, .75);
+    margin-bottom: 5%;
+    position: relative;
+}
+
+.notesleft {
+    display: inline-block;
+    text-align: left;
+    font-family: 'Staatliches', cursive;
+    font-size: 1.25vw;
+    z-index: 1;
+    margin-left: 2%;
+    margin-bottom: 5%;
+    padding-left: 2%;
+    }
+
+.notesright {
+    display: block;
+    text-align: right;
+    direction: rtl;
+    font-family: 'Staatliches', cursive;
+    font-size: 1.25vw;
+    z-index: 1;
+    margin-right: 2%;
+    margin-bottom: 5%;
+    padding-right: 2%;
+}
+
+h1 {
+    line-height: 50px;
+    margin-top: 50px;
+    font-family: 'Staatliches', cursive;
+    color: rgb(241, 131, 182);
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-text-select: none;
+    -webkit-user-select: none;
+    transition-duration: 0.1s;
+}
+
+h1:hover {
+    font-family: 'Staatliches', cursive;
+    color: rgb(0, 0, 0);
+    transition-timing-function: ease-out;
+    transition-duration: 2s;
+    transition-duration: 0.1s;
+}
+
+h1.chapterleft {
+    writing-mode: vertical-rl;
+    top: 15%;
+    right:5%;
+    margin: 0px;
+    position: relative;
+    font-size: 100px;
+    display: inline-block;
+    position: absolute;
+    line-height: 125px;
+    z-index: 1;
+}
+
+h1.chapterright {
+    writing-mode: vertical-rl;
+    top: 15%;
+    left:5%;
+    margin: 0px;
+    position: absolute;
+    font-size: 100px;
+    display: inline-block;
+    transform: scale(-1, -1);
+    line-height: 125px;
+    z-index: 1;
+}
+
+h1.chapterleft:hover {
+    color: rgb(241, 131, 182);
+}
+
+h1.chapterright:hover {
+    color: rgb(241, 131, 182);
+}
+
+h3 {
+    line-height: 50px;
+    margin-top: 50px;
+    font-family: 'Staatliches', cursive;
+    color: rgb(241, 131, 182);
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-text-select: none;
+    -webkit-user-select: none;
+    transition-duration: 0.1s;
+}
+
+h3:hover {
+    font-family: 'Staatliches', cursive;
+    color: rgb(0, 0, 0);
+    transition-timing-function: ease-out;
+    transition-duration: 2s;
+    transition-duration: 0.1s;
+}
+
+p {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-text-select: none;
+    -webkit-user-select: none;
+    transition-duration: 0.1s;  
+}
+
+p:hover {
+    color: rgb(241, 131, 182);
+    cursor: default;
+    transition-timing-function: 2s ease-in;
+}
+
+li {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-text-select: none;
+    -webkit-user-select: none;
+    transition-duration: 0.1s; 
+  }
+
+
+
+li:hover {
+    color: rgb(241, 131, 182);
+    cursor: default;
+    transition-timing-function: 2s ease-in;
+}
+
+
+.wormhole {
+    position: fixed;
+    z-index: -5;
+    height: 100vh;
+    width: 100vw;
+}
+
+.dolphin {
+    position: fixed;
+    top: 10px;
+    right: 0px;
+    z-index: -4;
+    height: 20vh;
+    width: 20vw;
+    cursor: default;
+}
+
+.bluelines {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    z-index: -4;
+    height: 20vh;
+    width: 20vh;
+    border-radius: 50%; 
+}
+
+
+.incorrectshake {
+    animation: shake 1s;
+    transition: 100ms;
+}
+
+@keyframes shake {
+    25% { transform: translate(20px)}
+    50% { transform: translate(-20px)}
+    75% { transform: translate(20px)}
+    100% { transform: translate(-20px)}
+}
+
+@media (hover: none) {
+    li:hover { color: inherit; }
+  }
+
+@media only screen and (max-width: 1000px) {
+
+#page {
+    display: none;
+    letter-spacing: 0px;
+}
+
+.bordertext {
+    border: 10px solid rgba(241, 131, 182, .70);
+    border-radius: 60px;
+    background: rgba(255, 255, 255, .5);
+    margin-bottom: 7.5%;
+}
+
+
+
+.notesleft {
+    font-size: 2.5vh;
+    display: inline-block;
+}
+
+.notesleft.li {
+    text-indent: -30px;
+    margin-left: 20px;
+}
+
+.notesright{
+    font-size: 2.5vh;
+    text-align: right;
+    display: inline-block;
+}
+
+h1.chapterleft {
+    z-index: -1;
+}
+
+h1.chapterright {
+    z-index: -1;
+    left: 15%;
+
+}
+
+
+.wormhole{
+    width: 200%;
+    height: 100%;
+    position: fixed;
+}
+
+.dolphin{
+    width: 40%;
+    height: 20%;
+}
+
+h1 {
+    font-family: 'Staatliches', cursive;
+    color: rgb(241, 131, 182);
+    margin-bottom: 15px;
+}
+
+h1:active {
+    font-family: 'Staatliches', cursive;
+    color: rgb(82, 82, 82);
+    transition-timing-function: ease-out;
+    transition-duration: 2s;
+    transition-duration: 0.1s;
+}
+
+h3 {
+    font-family: 'Staatliches', cursive;
+    margin-bottom: 10px;
+    color: rgb(241, 131, 182);
+}
+
+h3:active {
+    color: rgb(82, 82, 82);
+    transition-timing-function: ease-out;
+    transition-duration: 2s;
+    transition-duration: 0.1s;
+}
+
+li {
+    margin-bottom: 15px;
+    letter-spacing: 0px;
+}
+
+li:active {
+    color: rgb(241, 131, 182);
+}
+
+}
+
+@media screen and(max-width: 400px) {
+    #userpassword {
+        width:300px;
+        height: 20px;
+    }
+}
+
