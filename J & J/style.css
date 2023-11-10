@@ -2,7 +2,7 @@
 font-family: 'Work Sans', sans-serif; */
 
 html {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     scroll-behavior: smooth;
     /* border: 2rem rgb(224, 72, 173) solid; 
     border-radius: 5rem; */
@@ -130,29 +130,27 @@ body {
 
 .header-title {
     font-size: min(.75rem + 2vw);
-    font-weight: 800;
-    font-style: bold;
+    font-weight: 700;
     margin: 0px 0px;
+    white-space: nowrap;
 }
 
 .header-text {
     font-size: min(.5rem + 1vw);
     font-weight: 800;
-    font-style: bold;
     color: white;
     line-height: min(2rem + 1vw);
-    white-space: wrap;
+    display: inline-block;
     margin: 50px 0px;
 }
 
 .header-gif {
     width: auto;
     position: relative;
-    padding-top: calc(min(10rem + 10vh));
-    padding-left: calc(min(5rem + 3vw));
+    padding-top: calc(min(3rem + 10vh));
+    margin-left: calc(min(0rem + 3vw));
     margin-right: calc(min(1rem + 3vw));
     color: white;
-    animation: wave-bob 1400ms linear infinite;
     background-color: rgb(248, 103, 176);
 }
 
@@ -345,7 +343,7 @@ body {
         left: 0;
         bottom: 100px;
         padding-left: 0;
-
+        display: none;
     }
 
     .introductions .header-title {
