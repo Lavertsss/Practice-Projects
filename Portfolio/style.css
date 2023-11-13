@@ -8,6 +8,16 @@ html {
 
 body {
   margin: 0 0;
+  animation: fadeIn 1000ms ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 
 /* Global Classes */
@@ -232,5 +242,26 @@ p.body {
 /* Section 2 */
 .section-2 {
   background-color: rgb(36, 36, 36);
-  height: 75vh;
+  height: min-content;
+}
+
+.project-flex {
+  padding-top: 5rem;
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  grid-column-gap: 15vw;
+  row-gap: 2rem;
+  justify-content: center;
+}
+
+.project-frame {
+  display: flex;
+  width: 300px;
+  height: 350px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  box-shadow: 5px 10px 1px 5px;
 }
