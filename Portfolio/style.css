@@ -4,6 +4,7 @@ html {
   /* font-family: 'DM Sans', sans-serif; */
   font-family: "Inter", sans-serif;
   transition-duration: 200ms;
+  background-color: rgb(36, 36, 36);
 }
 
 body {
@@ -21,12 +22,43 @@ body {
 }
 
 /* Global Classes */
+.accent-static {
+  color: rgb(255, 137, 46);
+}
+
+.accent-back:hover {
+  background-color: rgb(255, 137, 46);
+  transition-duration: 200ms;
+}
+
+.accent:hover {
+  color: rgb(255, 137, 46);
+  transition-duration: 200ms;
+}
+
 .box {
   padding: 5vh 8vw;
 }
 
 .black {
   color: white;
+}
+
+.center-text {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-weight: 800;
+}
+
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .scroll {
@@ -39,6 +71,7 @@ body {
   font-weight: 400;
   font-size: min(3rem, 1vw);
   width: 1px;
+  color: white;
 }
 
 .material-symbols-outlined {
@@ -46,18 +79,18 @@ body {
 }
 
 .bob {
-  animation: bob-feature 2s ease-in infinite;
+  animation: bob-feature 1s linear infinite;
 }
 
 @keyframes bob-feature {
   0% {
-    transform: translateY(-1px);
+    transform: translateY(0px);
   }
   50% {
-    transform: translateY(1px);
+    transform: translateY(2px);
   }
   100% {
-    transform: translateY(-1px);
+    transform: translateY(0px);
   }
 }
 
@@ -67,22 +100,39 @@ body {
 }
 
 /* Navigation Bar */
+.nav-wrapper {
+  display: flex;
+  width: 100%;
+}
 
 .navigation-bar {
   position: relative;
   display: flex;
-  justify-content: flex-end;
   gap: 3vw;
   font-weight: 400;
+  background-color: rgb(36, 36, 36);
+  color: rgb(255, 255, 255);
+  flex: 1;
+}
+
+.navigation-name {
+  color: white;
+  text-decoration: none;
+  text-decoration: none;
+  font-size: min(4rem, 1.5vw);
+  display: inline-block;
+  font-weight: 600;
 }
 
 .navigation-items {
+  color: white;
+  font-weight: 600;
   text-decoration: none;
-  color: black;
+  text-decoration: none;
   font-size: min(4rem, 1.5vw);
   display: inline-block;
   padding-bottom: 2px;
-  background-image: linear-gradient(#000 0 0);
+  background-image: linear-gradient(#ffffff 0 0);
   background-position: 0 100%; /*OR bottom left*/
   background-size: 0% 2px;
   background-repeat: no-repeat;
@@ -91,18 +141,16 @@ body {
 
 .navigation-items:hover {
   background-position: 100% 100%; /*OR bottom right*/
-  background-size: 100% 2px;
+  background-size: 100% 4px;
 }
 
 /* Section 1 */
 
 .section-1 {
-  min-height: 60vh;
-  height: 100%;
-  margin-bottom: 15vh;
+  background-color: rgb(36, 36, 36);
+  height: 50vh;
+  margin-bottom: 3vh;
   display: flex;
-  flex: 1;
-  align-items: center;
   position: relative;
 }
 
@@ -110,10 +158,32 @@ body {
   padding-top: 15vh;
   flex: 1;
   overflow: hidden;
+  position: relative;
+  width: min(70vw, 100%);
+}
+
+.section-image-wrapper {
+  padding-top: 20vh;
+  position: relative;
+}
+
+#blob {
+  width: 30vh;
+  height: 30vh;
+  background-color: white;
+  border-radius: 100%;
+  margin: auto;
+  transition-duration: 200ms;
+}
+
+#blob:hover {
+  transform: scale(0.9);
+  transition-duration: 200ms;
+  background-color: rgb(255, 137, 46);
 }
 
 .title {
-  font-weight: 500;
+  font-weight: 800;
   font-size: min(5rem, 3vw);
   width: min-content;
   white-space: nowrap;
@@ -121,55 +191,53 @@ body {
   margin-bottom: 3.5vh;
   transition-duration: 500ms;
   transition-timing-function: ease-in;
+  color: rgb(255, 255, 255);
 }
 
 .subtitle {
-  font-weight: 400;
+  font-weight: 600;
   font-size: min(3rem, 1vw);
   line-height: 0px;
-  margin-top: 1vh;
-  color: rgb(82, 82, 82);
+  color: rgb(221, 221, 221);
 }
 
 .subtitle-flex {
   display: flex;
   align-items: center;
-  gap: 12.5rem;
+  gap: 12vw;
+  margin-top: 1vh;
+  width: max-content;
 }
 
 .body {
   font-weight: 400;
-  font-size: min(3rem, 1.5vw);
+  font-size: min(3vh, 6vh);
   padding-left: 10px;
   margin: 0px;
-  margin-right: 20px;
+  margin-right: 30vh;
   transform: translateX(-101%);
-}
-
-p.body {
+  color: white;
   animation: body-appear, body-disappear;
   animation-duration: 3000ms, 3000ms;
   animation-iteration-count: 1;
   animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
   animation-fill-mode: forwards;
-  animation-delay: 1750ms, 15000ms;
+  animation-delay: 2000ms, 20000ms;
+  word-spacing: +5px;
 }
 
 .body-flex {
   display: flex;
-  border-left: 4px solid black;
-  height: 0px;
+  border-left: 4px solid rgb(36, 36, 36);
+  height: 0vh;
   margin-top: 5vh;
   align-items: center;
-}
-
-.body-flex {
   animation: border-appear, border-disappear;
   animation-duration: 1500ms, 1500ms;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
-  animation-delay: 500ms, 16600ms;
+  animation-delay: 500ms, 22000ms;
 }
 
 @keyframes body-appear {
@@ -198,48 +266,40 @@ p.body {
   }
 
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-101%);
   }
 }
 
 @keyframes border-appear {
   0% {
     height: 0vh;
+    border-left-color: rgb(36, 36, 36);
+  }
+
+  90% {
     border-left-color: rgb(255, 255, 255);
   }
 
-  99% {
-    height: 13vh;
-    border-left-color: rgb(0, 0, 0);
-  }
-
   100% {
-    height: min-content;
-    border-left-color: rgb(0, 0, 0);
+    height: 15vh;
+    border-left-color: rgb(255, 255, 255);
   }
 }
 
 @keyframes border-disappear {
   0% {
-    height: min-content;
-    border-left-color: rgb(0, 0, 0);
+    height: 15vh;
+    border-left-color: rgb(255, 255, 255);
   }
 
   1% {
-    height: 13vh;
-    border-left-color: rgb(0, 0, 0);
+    border-left-color: rgb(255, 255, 255);
   }
 
   100% {
-    height: 1px;
-    border-left-color: rgb(255, 255, 255);
+    height: 0vh;
+    border-left-color: rgb(36, 36, 36);
   }
-}
-
-#blob {
-  max-width: 500px;
-  max-height: 500px;
-  margin: auto;
 }
 
 /* animation: border-appear 1500ms ease-in 1 forwards;
@@ -249,6 +309,10 @@ p.body {
 .section-2 {
   background-color: rgb(36, 36, 36);
   min-height: 100vh;
+  position: relative;
+  display: flex;
+  padding-top: 10vh;
+  justify-content: center;
 }
 
 .light-bar {
@@ -261,54 +325,99 @@ p.body {
   background-color: rgb(255, 255, 234);
   border-radius: 20px;
   margin-top: 3vh;
+  border-top: 15px black solid;
 }
 
 .fly {
+  position: absolute;
+  top: 20vh;
+  right: 35%;
+  left: 35%;
   max-height: 25px;
   max-width: 25px;
   display: flex;
   justify-content: center;
+  animation: fly-animation 10000ms ease 0ms infinite;
   margin: auto;
 }
 
 @keyframes fly-animation {
   0% {
-    transform: translateX(0);
-    transform: translateY(0);
+    transform: translate(0px, 0px);
   }
+
+  20% {
+    transform: translate(-156px, -70px);
+  }
+
+  40% {
+    transform: translate(170px, -50px);
+  }
+
+  60% {
+    transform: translate(-180px, 20px);
+  }
+
+  80% {
+    transform: translate(180px, 40px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+.project-wrapper {
+  padding-top: 15vh;
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
 .project-flex {
-  padding-top: 5vh;
   position: relative;
   display: flex;
-  flex: 1;
   flex-wrap: nowrap;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-content: space-between;
+  flex-direction: column;
+  justify-items: center;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  gap: 10vh;
+  width: 100%;
+}
+
+.project-header {
+  font-weight: 800;
+  font-size: min(5rem, 3vw);
+  width: min-content;
+  white-space: nowrap;
+  line-height: 0px;
+  margin-bottom: 0vh;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in;
+  color: rgb(255, 255, 255);
+}
+
+.project-subheader {
+  font-weight: 700;
+  font-size: min(5rem, 2vw);
+  line-height: 0px;
+  color: rgb(221, 221, 221);
+  margin: 0px 0px;
 }
 
 .project-frame {
   display: flex;
-  width: calc(200px + 10vw);
-  height: calc(400px + 20vh);
-  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
   position: relative;
-  border: 3px solid black;
-  box-shadow: 5px 10px 1px 5px;
-  transition-duration: 200ms;
-}
-
-.project-frame:hover {
-  transform: scale(1.05, 1.05);
-  transition-duration: 200ms;
-  box-shadow: -5px 15px 1px 5px;
+  border-radius: 20px;
+  padding: 5vh 0;
 }
 
 .frame-format {
   width: 100%;
-  margin: 10px auto;
+  margin: 15px auto;
   display: block;
   margin-left: 15px;
   margin-right: 15px;
@@ -319,7 +428,7 @@ p.body {
   /* margin: 10px auto; */
   background-color: black;
   width: 100%;
-  height: 75%;
+  height: 100%;
 }
 
 .frame-caption {
@@ -327,4 +436,5 @@ p.body {
   overflow: hidden;
   font-weight: 500;
   font-size: 200%;
+  color: white;
 }

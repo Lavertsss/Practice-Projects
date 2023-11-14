@@ -1,11 +1,3 @@
-var animation = bodymovin.loadAnimation({
-  container: document.getElementById("blob"),
-  renderer: "svg",
-  loop: true,
-  autoplay: true,
-  path: "data.json",
-});
-
 // function translatefunc() {
 //   // Code for Chrome, Safari, Opera
 //   document.getElementsByClassName("body").style.WebkitTransform =
