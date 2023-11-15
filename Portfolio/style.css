@@ -224,14 +224,15 @@ body {
 }
 
 .body {
-  font-weight: 400;
+  font-weight: 500;
   font-size: min(3vh, 6vh);
+  color: white;
   padding-left: 10px;
   margin: 0px;
   margin-right: 30vh;
   transform: translateX(-101%);
   word-spacing: +5px;
-  color: white;
+
   /* animation: body-appear, body-disappear;
   animation-duration: 3000ms, 3000ms;
   animation-iteration-count: 1;
@@ -507,4 +508,35 @@ body {
 .caption-items:hover {
   background-position: 100% 100%; /*OR bottom right*/
   background-size: 100% 3px;
+}
+
+/* Section 3 */
+
+.section-3 {
+  background-color: rgb(36, 36, 36);
+  height: min-content;
+  margin-top: 15vh;
+  margin-bottom: 3vh;
+  display: block;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+}
+
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-wrapper .title {
+  width: 100%;
+}
+
+.about-text {
+  margin-top: 10vh;
+  font-weight: 500;
+  font-size: min(3vh, 6vh);
+  color: white;
+  line-height: 5vh;
 }
