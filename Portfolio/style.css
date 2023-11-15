@@ -36,6 +36,10 @@ body {
   transition-duration: 200ms;
 }
 
+.accent-border {
+  border-color: rgb(255, 137, 46);
+}
+
 .box {
   padding: 5vh 8vw;
 }
@@ -72,6 +76,16 @@ body {
   font-size: min(3rem, 1vw);
   width: 1px;
   color: white;
+}
+
+.section-divider {
+  display: block;
+  height: 0px;
+  width: 70%;
+  border: rgb(255, 137, 46) 5px solid;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-top: 25vh;
 }
 
 .material-symbols-outlined {
@@ -132,7 +146,7 @@ body {
   font-size: min(4rem, 1.5vw);
   display: inline-block;
   padding-bottom: 2px;
-  background-image: linear-gradient(#ffffff 0 0);
+  background-image: linear-gradient(rgb(255, 137, 46) 0 0);
   background-position: 0 100%; /*OR bottom left*/
   background-size: 0% 2px;
   background-repeat: no-repeat;
@@ -216,14 +230,16 @@ body {
   margin: 0px;
   margin-right: 30vh;
   transform: translateX(-101%);
+  word-spacing: +5px;
   color: white;
-  animation: body-appear, body-disappear;
+  /* animation: body-appear, body-disappear;
   animation-duration: 3000ms, 3000ms;
   animation-iteration-count: 1;
   animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
   animation-fill-mode: forwards;
-  animation-delay: 2000ms, 20000ms;
-  word-spacing: +5px;
+  animation-delay: 2000ms, 20000ms; */
+  animation: body-appear 3000ms cubic-bezier(0.39, 0.575, 0.565, 1) 2000ms 1
+    forwards;
 }
 
 .body-flex {
@@ -232,12 +248,13 @@ body {
   height: 0vh;
   margin-top: 5vh;
   align-items: center;
-  animation: border-appear, border-disappear;
+  /* animation: border-appear, border-disappear;
   animation-duration: 1500ms, 1500ms;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
-  animation-delay: 500ms, 22000ms;
+  animation-delay: 500ms, 22000ms; */
+  animation: border-appear 1500ms ease-in 500ms 1 forwards;
 }
 
 @keyframes body-appear {
@@ -302,9 +319,6 @@ body {
   }
 }
 
-/* animation: border-appear 1500ms ease-in 1 forwards;
-  animation: body-appear 3000ms cubic-bezier(0.39, 0.575, 0.565, 1) 1250ms 1 forwards; */
-
 /* Section 2 */
 .section-2 {
   background-color: rgb(36, 36, 36);
@@ -366,12 +380,13 @@ body {
     transform: translate(0px, 0px);
   }
 }
+
 .project-wrapper {
-  padding-top: 15vh;
-  flex: 1;
-  overflow: hidden;
+  padding-top: 10vh;
   position: relative;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-flex {
@@ -382,16 +397,15 @@ body {
   justify-items: center;
   padding-top: 5vh;
   padding-bottom: 5vh;
-  gap: 10vh;
   width: 100%;
 }
 
 .project-header {
   font-weight: 800;
-  font-size: min(5rem, 3vw);
-  width: min-content;
+  font-size: min(7rem, 4vw);
+  display: block;
+  width: 100%;
   white-space: nowrap;
-  line-height: 0px;
   margin-bottom: 0vh;
   transition-duration: 500ms;
   transition-timing-function: ease-in;
@@ -399,42 +413,99 @@ body {
 }
 
 .project-subheader {
+  display: block;
+  width: 100%;
   font-weight: 700;
   font-size: min(5rem, 2vw);
-  line-height: 0px;
   color: rgb(221, 221, 221);
   margin: 0px 0px;
+  flex-wrap: wrap;
 }
 
-.project-frame {
+.project-description {
   display: flex;
+  display: block;
   width: 100%;
-  height: 100%;
-  position: relative;
-  border-radius: 20px;
-  padding: 5vh 0;
+  font-size: min(3rem, 1.5vw);
+  width: ;
+  color: white;
+  font-weight: 600;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.img-right {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .frame-format {
   width: 100%;
-  margin: 15px auto;
-  display: block;
-  margin-left: 15px;
-  margin-right: 15px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.img-wrapper {
+  display: flex;
+  width: 100%;
+  transition-duration: 200ms;
+}
+
+.border-left {
+  border-left: rgba(255, 137, 46, 0) 10px solid;
+  transition-duration: 200ms;
+}
+
+.border-left:hover {
+  border-left: rgb(255, 137, 46) 10px solid;
+  transition-duration: 200ms;
+}
+
+.border-right {
+  border-right: rgba(255, 137, 46, 0) 10px solid;
+  transition-duration: 200ms;
+}
+
+.border-right:hover {
+  border-right: rgb(255, 137, 46) 10px solid;
+  transition-duration: 200ms;
 }
 
 .frame-img {
   display: flex;
   /* margin: 10px auto; */
-  background-color: black;
-  width: 100%;
-  height: 100%;
+  object-fit: contain;
+  border-radius: 50px;
+  padding: 0 10px;
+  transition-duration: 200ms;
 }
 
 .frame-caption {
-  align-items: stretch;
+  align-items: center;
   overflow: hidden;
   font-weight: 500;
-  font-size: 200%;
+  font-size: min(3rem, 1.5vw);
+  margin: 15px 10px;
+  font-weight: 600;
+}
+
+.caption-items {
+  text-decoration: none;
   color: white;
+  padding-right: 5px;
+  padding-left: 5px;
+  background-image: linear-gradient(rgb(255, 137, 46) 0 0);
+  background-position: 0 100%; /*OR bottom left*/
+  background-size: 0% 3px;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s, background-position 0s 0.3s;
+}
+
+.caption-items:hover {
+  background-position: 100% 100%; /*OR bottom right*/
+  background-size: 100% 6px;
 }
