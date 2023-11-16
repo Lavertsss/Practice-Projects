@@ -482,6 +482,8 @@ body {
   border-radius: 50px;
   padding: 0 10px;
   transition-duration: 200ms;
+  width: 75%;
+  height: auto;
 }
 
 .frame-caption {
