@@ -171,7 +171,8 @@ body {
 .section-wrapper {
   padding-top: 15vh;
   flex: 1;
-  overflow: hidden;
+  overflow-x: visible;
+  overflow-y: hidden;
   position: relative;
   width: min(70vw, 100%);
 }
@@ -427,7 +428,7 @@ body {
   display: flex;
   display: block;
   width: 100%;
-  font-size: min(3rem, 1.5vw);
+  font-size: min(3rem, 1.25vw);
   color: white;
   font-weight: 600;
 }
@@ -442,7 +443,7 @@ body {
 }
 
 .frame-format {
-  width: 100%;
+  width: auto;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -453,10 +454,11 @@ body {
   display: flex;
   width: 100%;
   transition-duration: 200ms;
+  position: relative;
 }
 
-.border-left {
-  border-left: rgba(255, 137, 46, 0) 10px solid;
+/* .border-left {
+  border-left: rgb(255, 137, 46) 10px solid;
   transition-duration: 200ms;
 }
 
@@ -466,24 +468,77 @@ body {
 }
 
 .border-right {
-  border-right: rgba(255, 137, 46, 0) 10px solid;
+  border-right: rgb(255, 137, 46) 10px solid;
   transition-duration: 200ms;
 }
 
 .border-right:hover {
   border-right: rgb(255, 137, 46) 10px solid;
   transition-duration: 200ms;
-}
+} */
 
 .frame-img {
   display: flex;
   /* margin: 10px auto; */
-  object-fit: contain;
+  /* object-fit: contain; */
   border-radius: 50px;
-  padding: 0 10px;
+  padding: 0 0;
   transition-duration: 200ms;
   width: 75%;
   height: auto;
+}
+
+.preview {
+  border-radius: 50px;
+  transition-duration: 300ms;
+  object-fit: contain;
+  width: 75%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(55, 55, 55, 0.875);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  font-size: min(4rem, 4vw);
+}
+
+.preview:hover {
+  transition-duration: 300ms;
+  opacity: 1;
+}
+
+.preview-left {
+  border-radius: 50px;
+  transition-duration: 300ms;
+  object-fit: contain;
+  width: 75%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: rgba(55, 55, 55, 0.956);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  font-size: min(4rem, 4vw);
+}
+
+.preview-left:hover {
+  transition-duration: 300ms;
+  opacity: 1;
+}
+
+.preview-link {
+  text-decoration: solid aquamarine;
+  color: white;
 }
 
 .frame-caption {
