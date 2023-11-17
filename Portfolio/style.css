@@ -207,6 +207,10 @@ body {
   background-color: rgb(255, 137, 46);
 }
 
+.contact-text {
+  font-size: 30px;
+}
+
 .title {
   font-weight: 800;
   font-size: min(5rem, 4vw);
@@ -615,27 +619,28 @@ body {
   color: white;
   line-height: 5vh;
   text-align: center;
-  text-align-last: center;
   width: 75%;
 }
 
 .stack-references {
   width: 45%;
   display: flex;
-  flex-wrap: nowrap;
-  display: block;
+  flex-wrap: wrap;
   text-align: left;
+  align-items: center;
 }
 
 .stack-references .title {
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
   height: min-content;
-  width: min-content;
+  width: 100%;
   text-align: left;
   text-decoration: underline rgb(255, 137, 46);
+  text-underline-offset: 15px;
   line-height: 150%;
-  font-size: min(3rem, 4vw);
+  font-size: min(2.5rem, 4vw);
+  display: block;
 }
 
 .stack-references .stack-img {
@@ -683,6 +688,12 @@ body {
   align-items: center;
   margin: auto auto;
   transition-duration: 400ms;
+}
+
+.orange-button:hover {
+  background-color: rgb(255, 255, 255);
+  transition-duration: 200ms;
+  transform: scale(0.975);
 }
 
 .orange-button:active {
