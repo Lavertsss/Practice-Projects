@@ -36,6 +36,11 @@ body {
   transition-duration: 200ms;
 }
 
+.accent:active {
+  color: rgb(255, 137, 46);
+  transition-duration: 200ms;
+}
+
 .accent-border {
   border-color: rgb(255, 137, 46);
 }
@@ -168,6 +173,11 @@ body {
   background-size: 100% 4px;
 }
 
+.navigation-items:active {
+  color: rgb(255, 137, 46);
+  transition-duration: 20ms;
+}
+
 /* Section 1 */
 
 .section-1 {
@@ -204,6 +214,12 @@ body {
 #blob:hover {
   transform: scale(0.9);
   transition-duration: 200ms;
+  background-color: rgb(255, 137, 46);
+}
+
+#blob:active {
+  transform: scale(0.9);
+  transition-duration: 20ms;
   background-color: rgb(255, 137, 46);
 }
 
@@ -658,6 +674,12 @@ body {
   transition-timing-function: ease-out;
 }
 
+.stack-img:active {
+  transform: scale(1.05) translateY(-7px);
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+}
+
 /* Section 4 */
 .section-4 {
   margin-top: 10vh;
@@ -699,4 +721,193 @@ body {
 .orange-button:active {
   background-color: rgb(255, 255, 255);
   transition-duration: 200ms;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1280px) {
+  #page-container {
+    overflow-x: hidden;
+  }
+
+  .navigation-name {
+    font-size: 3vw;
+  }
+
+  .navigation-items {
+    font-size: 3vw;
+  }
+
+  .section-1 {
+    flex-direction: column;
+    height: min-content;
+    background-color: rgba(36, 36, 36, 0);
+  }
+
+  .section-wrapper {
+    padding-top: 2vw;
+    width: 95%;
+  }
+
+  .title {
+    font-size: clamp(1.75rem, 7vw, 4rem);
+  }
+
+  .subtitle-flex {
+    width: 100%;
+    height: min-content;
+    flex-wrap: wrap;
+    gap: 5vw;
+  }
+
+  .subtitle {
+    font-size: clamp(0.6rem, 2vw, 1rem);
+    line-height: auto;
+  }
+
+  span.material-symbols-outlined {
+    display: none;
+  }
+
+  .body-flex {
+    overflow: hidden;
+  }
+
+  @keyframes border-appear {
+    0% {
+      height: 0vh;
+      border-left-color: rgb(36, 36, 36);
+    }
+
+    90% {
+      border-left-color: rgb(255, 255, 255);
+    }
+
+    100% {
+      height: 21.25vh;
+      border-left-color: rgb(255, 255, 255);
+    }
+  }
+
+  .body {
+    font-size: clamp(1rem, 5vw, 1.25rem);
+    margin-right: 0vw;
+    overflow-y: visible;
+    text-align: left;
+  }
+
+  .section-image-wrapper {
+    position: relative;
+    padding-top: 8vh;
+  }
+
+  #blob {
+    width: 60vw;
+    height: 60vw;
+  }
+
+  .about-flex {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .section-divider-h {
+    margin-top: 5vw;
+    border: rgb(255, 137, 46) 3px solid;
+  }
+
+  .section-2 {
+    min-height: fit-content;
+  }
+
+  .project-header {
+    font-size: clamp(1.75rem, 10vh, 2.5rem);
+  }
+
+  .project-subheader {
+    font-size: clamp(1rem, 5vw, 1.75rem);
+  }
+
+  .project-description {
+    font-size: clamp(0.5rem, 5vw, 0.75rem);
+  }
+
+  .frame-img {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .preview:active {
+    transition-duration: 100ms;
+    opacity: 1;
+  }
+
+  .preview-left {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .preview {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .caption-items {
+    font-size: clamp(0.25rem, 5vw, 0.75rem);
+  }
+
+  .section-3 {
+    margin-top: 3vh;
+  }
+
+  .about-text {
+    align-items: center;
+    font-size: 4vw;
+    line-height: 4vw;
+    width: 100%;
+  }
+
+  .stack-references {
+    margin-top: 5vh;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    column-gap: 1rem;
+  }
+
+  .stack-references .title {
+    text-align: center;
+    text-decoration: underline rgb(255, 137, 46) 2px;
+    font-size: clamp(1.25rem, 6vw, 2rem);
+    margin-top: 5vh;
+    margin-bottom: 4vh;
+  }
+
+  .stack-img {
+    margin-top: 0vh;
+    margin-bottom: 3vh;
+    height: 17.5%;
+    width: 17.5%;
+  }
+
+  .section-divider-v {
+    display: none;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .contact-wrapper .title {
+    writing-mode: horizontal-tb;
+    width: 100%;
+    font-size: clamp(4rem, 5vw, 4.5rem);
+    margin-bottom: 15vh;
+    margin-top: 15vh;
+  }
+
+  .orange-button {
+    height: 370px;
+    width: 370px;
+  }
 }
