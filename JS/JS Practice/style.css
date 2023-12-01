@@ -1,39 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@700&display=swap");
 
 html {
-    scroll-behavior: none;
+  scroll-behavior: none;
 }
 
 body::-webkit-scrollbar {
-    display:none;
+  display: none;
 }
 
 .words {
-    display: block;
-    height: 97.5vh;;
-    user-select: none;
+  display: flex;
+  height: 97.5vh;
+  align-items: center;
+  justify-content: center;
 }
 
 .wordswords {
-    position: absolute;
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100vw;
-    top: 40vh;
-    font-size: 2rem;
-    font-family: 'Silkscreen', cursive;
-    animation: loading infinite 2s;
-    cursor: pointer;
+  position: absolute;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2rem;
+  font-family: "Silkscreen", cursive;
+  cursor: pointer;
+}
+
+.wordswords:hover {
+  animation: loading infinite 2s;
 }
 
 @keyframes loading {
     0%, 100% {
         opacity: 100%;
     }
+  0%,
+  100% {
+    opacity: 100%;
+  }
 
-    70% {
-        opacity: 0%;
-    }
+  70% {
+    opacity: 0%;
+  }
 }

@@ -427,5 +427,5 @@ console.log(calcAverage(totals));
 console.log();
     */
 
-console.log('--- DOM MANIPULATION ---');
-console.log(document.querySelector('.words').textContent);
+console.log("--- DOM MANIPULATION ---");
+console.log(document.querySelector(".wordswords").textContent);
