@@ -20,7 +20,7 @@ console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
 /*
 console.log("Gymnastic Victory")
-
+    
 const Dolphins = (96 + 108 + 89) / 3;
 console.log(`The average score for the Dolphins is (${Dolphins})`);
 const Koalas = (88 + 91 + 110) / 3;
