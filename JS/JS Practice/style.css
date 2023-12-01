@@ -31,9 +31,10 @@ body::-webkit-scrollbar {
 }
 
 @keyframes loading {
-    0%, 100% {
-        opacity: 100%;
-    }
+  0%,
+  100% {
+    opacity: 100%;
+  }
   0%,
   100% {
     opacity: 100%;
