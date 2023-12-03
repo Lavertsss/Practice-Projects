@@ -46,30 +46,30 @@ body {
 }
 
 /* SECTION 1 NAVIGATION BAR*/
-.navigation-wrapper {
-  display: flex;
-  width: 50%;
-  z-index: 1;
-  height: min-content;
-  position: absolute;
-}
 
 .navigation-container {
   display: flex;
-  justify-content: space-around;
   margin: 0 auto;
   column-gap: 3%;
-  background-color: rgba(15, 15, 15, 0.75);
-  position: fixed;
-  height: 50px;
+  position: relative;
   align-items: center;
-  width: 50%;
+  width: 100%;
+  padding: 2% 3%;
 }
 
 .nav-item {
   font-weight: 400;
-  font-family: "Passion One", sans-serif;
-  font-size: 25px;
+  font-size: 35px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  color: rgb(93, 255, 6);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 800, "GRAD" 0, "opsz" 24;
 }
 
 /* SECTION 1 CONTENT */
@@ -97,9 +97,14 @@ body {
 .content {
   width: 100%;
   position: relative;
-  padding-top: 40vh;
+  padding-top: 30vh;
   font-family: "Passion One", sans-serif;
   font-weight: 900;
+}
+
+.content-right {
+  writing-mode: horizontal-tb;
+  text-align: right;
 }
 
 .title {
@@ -108,17 +113,22 @@ body {
   word-break: break-all;
 }
 
+.content-right .sub-title {
+  justify-content: flex-end;
+}
+
 .sub-title {
-  font-size: 40px;
+  display: flex;
+  font-size: 50px;
   font-weight: 400;
   font-weight: 400;
   font-family: "Passion One", sans-serif;
-  width: 80%;
+  width: 85%;
 }
 
 .contact-button {
   display: flex;
-  font-size: 30px;
+  font-size: 40px;
   padding: 1px 20px;
   font-family: "Passion One", sans-serif;
   background-color: rgb(93, 255, 6);
@@ -127,8 +137,9 @@ body {
 }
 
 .contact-button:hover {
-  box-shadow: 15px 15px 0px 5px black;
+  box-shadow: 10px 10px 0px 5px black;
   transition-duration: 300ms;
+  background-color: rgb(145, 255, 86);
 }
 
 .contact-link {
@@ -139,6 +150,7 @@ body {
 .button {
   display: block;
   margin-top: 50px;
+  justify-content: center;
 }
 
 /* DIVIDERS
@@ -254,7 +266,7 @@ body {
 .works-caption {
   position: relative;
   display: flex;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 300;
   padding-left: 10px;
 }
@@ -291,6 +303,6 @@ body {
 
   100% {
     visibility: visible;
-    min-height: max-content;
+    height: inherit;
   }
 }
