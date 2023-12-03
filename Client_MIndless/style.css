@@ -6,7 +6,8 @@ html {
   margin: 0 0;
   padding: 0 0;
   scroll-behavior: smooth;
-  background-color: rgb(15, 15, 15);
+  background-color: rgb(20, 20, 20);
+  font-family: "Passion One", sans-serif;
 }
 
 body {
@@ -31,7 +32,11 @@ body {
   align-content: center;
 }
 
-.box-padding {
+.content-padding {
+  padding: 1% 3%;
+}
+
+.project-padding {
   padding: 1% 1%;
 }
 
@@ -77,7 +82,7 @@ body {
 }
 
 .section-1 {
-  background-color: rgb(15, 15, 15);
+  background-color: rgb(20, 20, 20);
   display: flex;
   position: relative;
   width: 100%;
@@ -98,19 +103,45 @@ body {
 }
 
 .title {
-  font-size: 100px;
+  font-size: 150px;
   color: rgb(93, 255, 6);
   word-break: break-all;
 }
 
 .sub-title {
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 400;
   font-weight: 400;
   font-family: "Passion One", sans-serif;
+  width: 80%;
 }
 
-/* DIVIDERS */
+.contact-button {
+  display: flex;
+  font-size: 30px;
+  padding: 1px 20px;
+  font-family: "Passion One", sans-serif;
+  background-color: rgb(93, 255, 6);
+  border: none;
+  transition-duration: 300ms;
+}
+
+.contact-button:hover {
+  box-shadow: 15px 15px 0px 5px black;
+  transition-duration: 300ms;
+}
+
+.contact-link {
+  color: black;
+  text-decoration: none;
+}
+
+.button {
+  display: block;
+  margin-top: 50px;
+}
+
+/* DIVIDERS
 .divider {
   display: flex;
   background-color: white;
@@ -123,21 +154,24 @@ body {
   align-content: center;
   margin: auto 0;
 }
+*/
 
 /* SECTION 2 */
 .section-2 {
-  background-color: rgb(15, 15, 15);
+  background-color: rgb(24, 24, 24);
   display: flex;
   position: relative;
   width: 25%;
   min-width: min-content;
-  height: 95vh;
+  height: 100vh;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: 20px;
   overflow: scroll;
   z-index: 2;
+  border-radius: 25px;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none;
+  transition-duration: 200ms;
   /* box-shadow: inset 0px 0px 10px 20px rgb(255, 7, 7); */
 }
 
@@ -146,53 +180,117 @@ body {
   position: relative;
   display: flex;
   text-align: center;
-  font-weight: 900;
-  font-family: "Passion One", sans-serif;
+  font-weight: 600;
   font-size: 35px;
   color: rgb(93, 255, 6);
+  padding-left: 10px;
+}
+
+.panel {
+  transition-duration: 200ms;
+}
+
+.panel:hover .hidden-text {
+  transition-duration: 500ms;
+  animation: text-show 500ms forwards;
 }
 
 .project-border {
-  border: rgba(255, 255, 255, 0) solid 5px;
+  border: rgb(24, 24, 24) solid 10px;
   border-radius: 25px;
-  transition-duration: 100ms;
-  padding: 10px 10px;
-  z-index: 1;
+  transition-duration: 250ms;
+  /* padding: 5px 5px; */
+  z-index: 10;
 }
 
 .project-border:focus,
-.project-border:active {
-  animation: focus-border 100ms linear;
+.project-border:active .project-border {
+  animation: focus-border 300ms linear;
   animation-fill-mode: forwards;
   border-radius: 25px;
-}
-
-.project-border:focus .embed {
-  pointer-events: all;
 }
 
 .project-wrapper {
   display: flex;
   height: auto;
   width: 100%;
-  background-color: white;
+  background-color: rgb(0, 0, 0);
   flex-shrink: 0;
-  border-radius: 7px;
+  border-radius: 20px;
   overflow: scroll;
   aspect-ratio: 16/9;
 }
 
+.embed {
+  pointer-events: none;
+}
+
+.project-border:focus .embed {
+  pointer-events: all;
+}
+
 @keyframes focus-border {
   0% {
-    border: rgba(255, 255, 255, 0) solid 5px;
+    border: rgb(24, 24, 24) solid 10px;
     border-radius: 25px;
   }
   100% {
-    border: white solid 5px;
+    border: white solid 10px;
     border-radius: 25px;
   }
 }
 
-.embed {
-  pointer-events: none;
+.works-title {
+  position: fixed;
+  position: relative;
+  display: flex;
+  font-weight: 600;
+  font-size: 25px;
+  color: rgb(93, 255, 6);
+  padding-left: 10px;
+  white-space: nowrap;
+}
+
+.works-caption {
+  position: relative;
+  display: flex;
+  font-size: 20px;
+  font-weight: 300;
+  padding-left: 10px;
+}
+
+.link {
+  text-decoration: underline rgb(93, 255, 6) 4px;
+  color: white;
+  margin: 0 auto;
+  padding: 5px 5px;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.hidden-text {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  visibility: collapse;
+  transition-duration: 500ms;
+  z-index: -2;
+}
+
+@keyframes text-show {
+  0% {
+    opacity: 0;
+    height: 1px;
+    visibility: collapse;
+  }
+
+  90% {
+    height: 150px;
+    visibility: visible;
+  }
+
+  100% {
+    visibility: visible;
+    min-height: max-content;
+  }
 }
