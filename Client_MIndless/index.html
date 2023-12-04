@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mindless Museum Rebrand</title>
     <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -25,9 +27,12 @@
                     <a class="nav-item" href="https://github.com/Lavertsss" target="_blank">Github</a>
                     <a class="nav-item" href="https://github.com/Lavertsss" target="_blank">Contact</a>
                     <a class="nav-item" href="https://github.com/Lavertsss" target="_blank">LinkedIn</a>
-                    <a class="nav-item"><span class="material-symbols-outlined">
+                    <div class="nav-search"><span class="material-symbols-outlined">
                             search
-                        </span></a>
+                        </span><input class="search-bar" id="search-id" type="text" placeholder=""
+                            onfocus="placeholderchange()" name="search">
+                        <!-- "Looking for something? -->
+                    </div>
                 </div>
                 <div class="content content-padding">
                     <p class="title">MINDLESS MUSEUM</p>
@@ -120,8 +125,31 @@
                         the bad gameplay we have clipped and prepped to show you.)</p>
                 </div>
             </div>
+
+            <div class="panel">
+                <div class="project-border" tabindex="0">
+                    <div class="project-wrapper">
+                        <iframe width="100%" height="100%"
+                            src="https://www.youtube.com/embed/EFc_nBgkpg0?si=_WJpLaFDgVtwdb2O"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="hidden-text">
+                    <p class="works-title">I Have A Problem<a class="link" href="mindlessmuseum.com">Page Link</a>
+                    </p>
+                    <p class="works-caption">Welcome to the suburbs of Boston Massachesuets. Today we shall be exploring
+                        the dark reaches of suboptimal gameplay and what not to do (courtesies of Joshua for providing
+                        the bad gameplay we have clipped and prepped to show you.)</p>
+                </div>
+            </div>
         </div>
     </div>
 </body>
 
 </html>
+<iframe width="auto" height="auto" src="https://www.youtube.com/embed/EFc_nBgkpg0?si=_WJpLaFDgVtwdb2O"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>

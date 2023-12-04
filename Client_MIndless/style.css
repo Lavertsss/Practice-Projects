@@ -62,14 +62,59 @@ body {
   font-size: 35px;
   color: rgb(255, 255, 255);
   text-decoration: none;
+  display: flex;
 }
 
 .nav-item:hover {
   color: rgb(93, 255, 6);
 }
 
+.nav-search {
+  font-weight: 400;
+  font-size: 35px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  display: flex;
+  align-content: center;
+  overflow: none;
+}
+
 .material-symbols-outlined {
   font-variation-settings: "FILL" 1, "wght" 800, "GRAD" 0, "opsz" 24;
+  display: flex;
+  align-content: center;
+  height: 24px;
+  margin: auto auto;
+  padding-right: 10px;
+}
+
+.search-bar {
+  border-radius: 30px;
+  height: min-content;
+  font-weight: 300;
+  font-size: 30px;
+  border: none;
+  font-family: "Passion One", sans-serif;
+  margin: auto auto;
+  width: 35px;
+  padding-left: 10px;
+  overflow: hidden;
+  transition-duration: 500ms;
+  color: white;
+}
+
+.search-bar::placeholder {
+  color: white;
+}
+
+.search-bar:focus {
+  outline: solid 4px rgb(93, 255, 6);
+  width: 500px;
+  color: black;
+}
+
+.search-bar:focus::placeholder {
+  color: gray;
 }
 
 /* SECTION 1 CONTENT */
