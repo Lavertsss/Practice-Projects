@@ -51,10 +51,13 @@ body {
   display: flex;
   margin: 0 auto;
   column-gap: 3%;
-  position: relative;
+  position: fixed;
   align-items: center;
   width: 100%;
-  padding: 2% 3%;
+  padding: 0.5% 3%;
+  z-index: 2;
+  background-color: rgba(20, 20, 20, 0.887);
+  border-radius: 50px;
 }
 
 .nav-item {
@@ -77,6 +80,7 @@ body {
   display: flex;
   align-content: center;
   overflow: none;
+  cursor: default;
 }
 
 .material-symbols-outlined {
@@ -101,6 +105,7 @@ body {
   overflow: hidden;
   transition-duration: 500ms;
   color: white;
+  cursor: pointer;
 }
 
 .search-bar::placeholder {
@@ -111,11 +116,16 @@ body {
   outline: solid 4px rgb(93, 255, 6);
   width: 500px;
   color: black;
+  cursor: text;
 }
 
 .search-bar:focus::placeholder {
   color: gray;
 }
+
+/* .search-bar:focus ~ .material-symbols-outlined {
+  color: rgb(93, 255, 6);
+} */
 
 /* SECTION 1 CONTENT */
 .section-1-layout {
@@ -142,7 +152,7 @@ body {
 .content {
   width: 100%;
   position: relative;
-  padding-top: 30vh;
+  padding-top: 27.5vh;
   font-family: "Passion One", sans-serif;
   font-weight: 900;
 }
@@ -156,7 +166,7 @@ body {
 .title {
   font-size: 130px;
   color: rgb(93, 255, 6);
-  word-break: none;
+  word-break: normal;
   white-space: nowrap;
 }
 
@@ -232,6 +242,37 @@ body {
   margin: auto 0;
 }
 */
+.technology {
+  width: 1005;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  position: relative;
+  height: min-content;
+}
+
+.technology .content {
+  overflow: hidden;
+  flex-wrap: wrap;
+  position: relative;
+  width: 80%;
+}
+
+.technology .title {
+  word-break: break-all;
+}
+
+.tech-stack-arrow {
+  width: 20%;
+  padding-top: 27.5%;
+}
+
+.right-arrow {
+  display: flex;
+  width: 100;
+  font-size: 100px;
+  align-content: center;
+}
 
 /* SECTION 2 */
 .section-2 {
@@ -254,17 +295,24 @@ body {
 
 .works-header {
   position: fixed;
-  position: relative;
-  display: flex;
+  display: block;
+  margin: 0 auto;
   text-align: center;
   font-weight: 600;
   font-size: 35px;
   color: rgb(93, 255, 6);
-  padding-left: 10px;
+  padding-left: 15px;
+  padding-right: 10px;
+  background-color: rgba(24, 24, 24, 0.84);
+  border-radius: 25px;
 }
 
 .panel {
   transition-duration: 200ms;
+}
+
+.panel:first-of-type {
+  padding-top: 15%;
 }
 
 .panel:hover .hidden-text {
