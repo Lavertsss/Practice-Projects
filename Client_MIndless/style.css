@@ -5,9 +5,7 @@ font-family: 'Work Sans', sans-serif; */
 html {
   margin: 0 0;
   padding: 0 0;
-  scroll-behavior: smooth;
   background-color: rgb(20, 20, 20);
-  font-family: "Passion One", sans-serif;
 }
 
 body {
@@ -15,6 +13,9 @@ body {
   margin: 0 0;
   overflow: hidden;
   color: white;
+  user-select: none;
+  font-family: "Passion One", sans-serif;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -145,8 +146,12 @@ body {
   align-content: center;
   overflow: scroll;
   -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none;
+  scrollbar-width: none; /* Fox */
   /* box-shadow: inset 0px 0px 10px 20px rgb(15, 15, 15); */
+}
+
+.section-1::-webkit-scrollbar {
+  display: none; /*Chrome*/
 }
 
 .content {
@@ -297,9 +302,13 @@ body {
   z-index: 2;
   border-radius: 25px;
   -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none;
+  scrollbar-width: none; /* Fox */
   transition-duration: 200ms;
   /* box-shadow: inset 0px 0px 10px 20px rgb(255, 7, 7); */
+}
+
+.section-2::-webkit-scrollbar {
+  display: none; /*Chrome*/
 }
 
 .works-header {
@@ -343,8 +352,13 @@ body {
   width: 100%;
   flex-shrink: 0;
   border-radius: 20px;
-  overflow: scroll;
   aspect-ratio: 16/9;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Fox */
+}
+
+.project-wrapper::-webkit-scrollbar {
+  display: none; /*Chrome*/
 }
 
 @keyframes focus-border {
@@ -393,6 +407,7 @@ body {
   visibility: collapse;
   transition-duration: 500ms;
   z-index: -2;
+  height: 0px;
 }
 
 @keyframes text-show {
