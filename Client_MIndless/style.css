@@ -204,6 +204,7 @@ body {
   background-color: rgb(93, 255, 6);
   border: none;
   transition-duration: 300ms;
+  border-radius: 25px;
 }
 
 .token {
@@ -215,6 +216,7 @@ body {
   transition-duration: 300ms;
   color: black;
   font-family: "Passion One", sans-serif;
+  border-radius: 25px;
 }
 
 .contact-button:hover {
