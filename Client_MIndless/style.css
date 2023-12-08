@@ -5,9 +5,7 @@ font-family: 'Work Sans', sans-serif; */
 html {
   margin: 0 0;
   padding: 0 0;
-  scroll-behavior: smooth;
   background-color: rgb(20, 20, 20);
-  font-family: "Passion One", sans-serif;
 }
 
 body {
@@ -15,6 +13,9 @@ body {
   margin: 0 0;
   overflow: hidden;
   color: white;
+  user-select: none;
+  font-family: "Passion One", sans-serif;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -51,10 +52,13 @@ body {
   display: flex;
   margin: 0 auto;
   column-gap: 3%;
-  position: relative;
+  position: fixed;
   align-items: center;
   width: 100%;
-  padding: 2% 3%;
+  padding: 0.5% 3%;
+  z-index: 2;
+  background-color: rgba(20, 20, 20, 0.887);
+  border-radius: 50px;
 }
 
 .nav-item {
@@ -62,15 +66,67 @@ body {
   font-size: 35px;
   color: rgb(255, 255, 255);
   text-decoration: none;
+  display: flex;
 }
 
 .nav-item:hover {
   color: rgb(93, 255, 6);
 }
 
+.nav-search {
+  font-weight: 400;
+  font-size: 35px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  display: flex;
+  align-content: center;
+  overflow: none;
+  cursor: default;
+}
+
 .material-symbols-outlined {
   font-variation-settings: "FILL" 1, "wght" 800, "GRAD" 0, "opsz" 24;
+  display: flex;
+  align-content: center;
+  min-height: 24px;
+  margin: auto auto;
+  padding-right: 10px;
 }
+
+.search-bar {
+  border-radius: 30px;
+  min-height: 10px;
+  font-weight: 300;
+  font-size: 30px;
+  border: none;
+  font-family: "Passion One", sans-serif;
+  margin: auto auto;
+  width: 35px;
+  padding-left: 10px;
+  overflow: hidden;
+  transition-duration: 500ms;
+  color: white;
+  cursor: pointer;
+}
+
+.search-bar::placeholder {
+  color: white;
+}
+
+.search-bar:focus {
+  outline: solid 4px rgb(93, 255, 6);
+  width: 500px;
+  color: black;
+  cursor: text;
+}
+
+.search-bar:focus::placeholder {
+  color: gray;
+}
+
+/* .search-bar:focus ~ .material-symbols-outlined {
+  color: rgb(93, 255, 6);
+} */
 
 /* SECTION 1 CONTENT */
 .section-1-layout {
@@ -90,14 +146,18 @@ body {
   align-content: center;
   overflow: scroll;
   -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none;
+  scrollbar-width: none; /* Fox */
   /* box-shadow: inset 0px 0px 10px 20px rgb(15, 15, 15); */
+}
+
+.section-1::-webkit-scrollbar {
+  display: none; /*Chrome*/
 }
 
 .content {
   width: 100%;
   position: relative;
-  padding-top: 30vh;
+  padding-top: 27.5vh;
   font-family: "Passion One", sans-serif;
   font-weight: 900;
 }
@@ -111,7 +171,7 @@ body {
 .title {
   font-size: 130px;
   color: rgb(93, 255, 6);
-  word-break: none;
+  word-break: normal;
   white-space: nowrap;
 }
 
@@ -149,6 +209,7 @@ body {
   background-color: rgb(93, 255, 6);
   border: none;
   transition-duration: 300ms;
+  border-radius: 25px;
 }
 
 .token {
@@ -160,6 +221,7 @@ body {
   transition-duration: 300ms;
   color: black;
   font-family: "Passion One", sans-serif;
+  border-radius: 25px;
 }
 
 .contact-button:hover {
@@ -173,20 +235,102 @@ body {
   text-decoration: none;
 }
 
-/* DIVIDERS
+.technology {
+  width: 1005;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  position: relative;
+}
+
+.technology .content {
+  overflow: hidden;
+  flex-wrap: wrap;
+  position: relative;
+  width: 80%;
+}
+
+.technology .title {
+  word-break: break-all;
+}
+
+.tech-stack-arrow {
+  width: 20%;
+  padding-top: 27.5%;
+}
+
+.right-arrow {
+  display: flex;
+  width: 100;
+  font-size: 100px;
+  align-content: center;
+}
+
+.technology-stack-container {
+  display: flex;
+  width: 100%;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.067);
+  border-radius: 50px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.tech-stack-title {
+  display: flex;
+  justify-content: flex-end;
+  color: rgb(93, 255, 6);
+  font-size: 60px;
+  text-decoration: underline white 5px;
+}
+
+.u-down {
+  justify-content: flex-start;
+  text-decoration: none;
+  text-decoration: overline white 5px;
+}
+
+.tech-stack-wrapper {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  padding: 30px 0;
+}
+
+.tech-stack {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  gap: 50px 20px;
+  padding: 0 50px;
+  width: auto;
+}
+
+.stack-item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+  aspect-ratio: 1/1;
+  color: black;
+  background-color: rgb(93, 255, 6);
+  justify-content: flex-end;
+}
+
+/* DIVIDERS */
 .divider {
   display: flex;
   background-color: white;
   position: relative;
   max-width: 7px;
   width: 1%;
-  min-width: 5px;
-  height: 75vh;
+  height: auto;
+  padding: 20px 0;
   border-radius: 100px;
   align-content: center;
-  margin: auto 0;
 }
-*/
 
 /* SECTION 2 */
 .section-2 {
@@ -195,36 +339,45 @@ body {
   position: relative;
   width: 25%;
   min-width: min-content;
-  height: 100vh;
   flex-direction: column;
   row-gap: 20px;
   overflow: scroll;
   z-index: 2;
   border-radius: 25px;
   -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none;
-  transition-duration: 200ms;
+  scrollbar-width: none; /* Fox */
   /* box-shadow: inset 0px 0px 10px 20px rgb(255, 7, 7); */
+}
+
+.section-2::-webkit-scrollbar {
+  display: none; /*Chrome*/
 }
 
 .works-header {
   position: fixed;
-  position: relative;
-  display: flex;
+  display: block;
+  margin: 0 auto;
   text-align: center;
   font-weight: 600;
   font-size: 35px;
   color: rgb(93, 255, 6);
-  padding-left: 10px;
+  padding-left: 15px;
+  padding-right: 10px;
+  background-color: rgba(24, 24, 24, 0.84);
+  border-radius: 25px;
 }
 
 .panel {
   transition-duration: 200ms;
 }
 
+.panel:first-of-type {
+  padding-top: 15%;
+}
+
 .panel:hover .hidden-text {
   transition-duration: 500ms;
-  animation: text-show 500ms forwards;
+  animation: text-show 1000ms forwards;
 }
 
 .project-border {
@@ -241,8 +394,17 @@ body {
   width: 100%;
   flex-shrink: 0;
   border-radius: 20px;
-  overflow: scroll;
   aspect-ratio: 16/9;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Fox */
+}
+
+.project-wrapper::-webkit-scrollbar {
+  display: none; /*Chrome*/
+}
+
+.project-radius {
+  border-radius: 20px;
 }
 
 @keyframes focus-border {
@@ -289,8 +451,8 @@ body {
   position: relative;
   flex-direction: column;
   visibility: collapse;
-  transition-duration: 500ms;
   z-index: -2;
+  height: 0px;
 }
 
 @keyframes text-show {
@@ -300,14 +462,14 @@ body {
     visibility: collapse;
   }
 
-  90% {
+  99.99% {
     height: 150px;
     visibility: visible;
   }
 
   100% {
     visibility: visible;
-    height: inherit;
+    height: auto;
   }
 }
 

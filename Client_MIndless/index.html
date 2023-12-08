@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mindless Museum Rebrand</title>
     <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link
         href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Passion+One:wght@400;700;900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
@@ -23,12 +27,19 @@
             <div class="section-1-layout ">
                 <div class="navigation-container">
                     <a class="nav-item" href="https://github.com/Lavertsss" target="_blank">Github</a>
-                    <a class="nav-item" href="https://github.com/Lavertsss" target="_blank">Contact</a>
-                    <a class="nav-item" href="https://github.com/Lavertsss" target="_blank">LinkedIn</a>
-                    <a class="nav-item"><span class="material-symbols-outlined">
+                    <a class="nav-item"
+                        href="https://mail.google.com/mail/u/0/#inbox?compose=SxfkdtCLpBXJRJDsqNchjCSRpZvMBWQjLFdQNCdgRXxbDZWFdZtBjrCgsfBTkDhkbZKbdHFVbSkhgFpgVdbPJjQJSgwZCWKGqtrwTXdzsBCpGXsdpvV"
+                        target="_blank">Contact</a>
+                    <a class="nav-item" href="https://www.linkedin.com/in/joseph-maddox-7032b3254/"
+                        target="_blank">LinkedIn</a>
+                    <div class="nav-search"><span class="material-symbols-outlined">
                             search
-                        </span></a>
+                        </span><input class="search-bar" id="search-id" type="text" placeholder=""
+                            onfocus="placeholderchange()" name="search">
+                        <!-- "Looking for something? -->
+                    </div>
                 </div>
+
                 <div class="content content-padding">
                     <p class="title">MINDLESS MUSEUM</p>
                     <p class="sub-title">An asylum of projects that enlighten the mind and sharpen the senses. Lorem
@@ -41,7 +52,6 @@
                                 target="_blank">CONTACT
                                 ME</a></button>
                     </div>
-
                 </div>
 
                 <div class="content content-padding content-right">
@@ -57,17 +67,57 @@
                                 href="https://supersimpledev.github.io/references/html-css-reference.pdf"
                                 target="_blank">LINKEDIN</a></button>
                     </div>
-
                 </div>
+
+                <div class="technology">
+                    <div class="content content-padding">
+                        <p class="title">TECHNOLOGIES</p>
+                        <p class="sub-title">An asylum of projects that enlighten the mind and sharpen the senses. Lorem
+                            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut
+                            aliquip ex ea commodo consequat.</p>
+
+                    </div>
+
+                    <div class="tech-stack-arrow content-padding">
+                        <p class="right-arrow">⬎</p>
+                    </div>
+                </div>
+
+                <div class="content content-padding">
+                    <div class="technology-stack-container content-padding">
+                        <p class="tech-title"></p>
+                        <p class="tech-stack-title">FRAMEWORKS</p>
+                        <div class="tech-stack-wrapper">
+                            <div class="tech-stack">
+                                <div class="stack-item">HTML</div>
+                                <div class="stack-item">CSS</div>
+                                <div class="stack-item">JAVASCRIPT</div>
+                                <div class="stack-item">TYPESCRIPT </div>
+                                <div class="stack-item">PYTHON</div>
+
+                            </div>
+                            <div class="divider"></div>
+                            <div class="tech-stack">
+                                <div class="stack-item">REACT</div>
+                                <div class="stack-item">BOOTSTRAP</div>
+                                <div class="stack-item">SASS</div>
+                            </div>
+                        </div>
+                        <p class="tech-stack-title u-down">LANGUAGES</p>
+                    </div>
+                </div>
+
             </div>
         </div>
-        <!-- <div class="divider"></div> -->
         <div class="section-2 project-padding">
             <h1 class="works-header">THE PROJECTS</h1>
             <div class="panel">
                 <div class="project-border" tabindex="0">
                     <div class="project-wrapper">
-                        <iframe width="100%" height="100%"
+                        <iframe width="100%" height="100%" class="project-radius"
                             src="https://www.youtube.com/embed/xsjviB1CZvk?si=rx9a4qFrjWh6jomd"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -86,7 +136,7 @@
             <div class="panel">
                 <div class="project-border" tabindex="0">
                     <div class="project-wrapper">
-                        <iframe width="100%" height="100%"
+                        <iframe width="100%" height="100%" class="project-radius"
                             src="https://www.youtube.com/embed/_r-yZYENJ1o?si=2I7kqH8PRosAW75W"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -105,8 +155,27 @@
             <div class="panel">
                 <div class="project-border" tabindex="0">
                     <div class="project-wrapper">
-                        <iframe width="100%" height="100%"
+                        <iframe width="100%" height="100%" class="project-radius"
                             src="https://www.youtube.com/embed/w6fSNYCuvl0?si=H4pnATvZFYKUjhq4"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="hidden-text">
+                    <p class="works-title">I Have A Problem<a class="link" href="mindlessmuseum.com">Page Link</a>
+                    </p>
+                    <p class="works-caption">Welcome to the suburbs of Boston Massachesuets. Today we shall be exploring
+                        the dark reaches of suboptimal gameplay and what not to do (courtesies of Joshua for providing
+                        the bad gameplay we have clipped and prepped to show you.)</p>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="project-border" tabindex="0">
+                    <div class="project-wrapper">
+                        <iframe width="100%" height="100%" class="project-radius"
+                            src="https://www.youtube.com/embed/EFc_nBgkpg0?si=_WJpLaFDgVtwdb2O"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen></iframe>
