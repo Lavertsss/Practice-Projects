@@ -117,24 +117,27 @@ const checkwinner = function(avgwhales, avglions) {
 
 checkwinner(scorewhales, scorelions)
 console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-    */ /*
-console.error('Arrays');
+    */
+console.error("Arrays");
 
-const friends = ['Chris', 'Elvedin', 'Erika', 'Julian'];
+const friends = ["Chris", "Elvedin", "Erika", "Julian"];
 console.log(friends);
 
 const years = new Array(1291, 1984, 2008, 2003);
-console.log(friends.length)
+console.log(friends.length);
 console.log(friends[friends.length - 3]);
-console.log(`${friends[0]} was born in ${years[3]}.`)
+console.log(`${friends[0]} was born in ${years[3]}.`);
 
-friends[0] = 'Fatso'; friends[1] = 'Pastey'; friends[2] = 'Slut'; friends[3] = 'Beandaddy'; 
+friends[0] = "Fatso";
+friends[1] = "Pastey";
+friends[2] = "Slut";
+friends[3] = "Beandaddy";
 console.log(friends);
-console.log(friends.indexOf('Slut'))
-    /*
+console.log(friends.indexOf("Slut"));
+
 // Can't change the whole array. You can only change one at a time.
 
-    /*const ultimateheader = function() {
+/*const ultimateheader = function() {
 
 const yname = prompt("What is your first name???");
 const tname = prompt('What is your best friends name???');
