@@ -1,0 +1,53 @@
+body {
+  scroll-behavior: smooth;
+  margin: 2% 6%;
+}
+
+html {
+  background-color: rgb(227, 198, 170);
+  overflow: hidden;
+  font-family: "Boska", serif;
+}
+
+.web-format {
+  display: flex;
+  aspect-ratio: 16/9;
+  height: auto;
+  width: 100%;
+  max-height: 100vh;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto 0;
+  width: auto;
+  height: 7rem;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.menu-container::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-option {
+  word-break: keep-all;
+  color: rgb(0, 0, 0);
+  padding: 0 20px;
+  margin: 0px 0px;
+  font-size: 5rem;
+  line-height: 7rem;
+  scroll-snap-align: center;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+}
+
+.menu-option:focus {
+  transition-duration: 2000ms;
+  text-decoration: underline 2px black solid;
+}
