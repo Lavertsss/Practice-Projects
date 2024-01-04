@@ -177,7 +177,3 @@ scrollbar-width: none; */
   text-align: justify;
   word-break: break-all;
 }
-
-.menu-option:not(focus) .button-wrapper {
-  display: none;
-}
