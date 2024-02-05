@@ -4,13 +4,14 @@ body {
 }
 
 html {
-  background-color: rgb(255, 147, 188);
+  background-color: rgb(10, 10, 10);
   overflow: hidden;
   font-family: "Switzer", sans-serif;
 }
 
 .section-spacing {
   height: 100vh;
+  position: relative;
 }
 
 /* overflow-y: auto;
@@ -26,7 +27,7 @@ scrollbar-width: none; */
 .choice-page {
   display: flex;
   flex-direction: column;
-  overflow: auto;
+  overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -42,6 +43,7 @@ scrollbar-width: none; */
   margin: auto auto;
   width: 1250px;
   height: 80vh;
+  margin-top: 1.5rem;
 }
 
 .menu-container {
@@ -49,23 +51,29 @@ scrollbar-width: none; */
   flex-direction: column;
   text-align: center;
   margin: auto auto;
+  padding: 2rem 2rem;
+  border-radius: 50px;
+  background-color: rgb(26, 26, 26);
+  height: 600px;
+  width: 600px;
+  font-size: 4.5rem;
 }
 
 .menu-option {
-  position: relative;
   display: flex;
   padding: 0 20px;
   margin: 0px 0px;
   cursor: pointer;
   user-select: none;
   white-space: nowrap;
-  font-size: 5rem;
+  font-size: 1em;
   font-weight: 900;
   line-height: 4rem;
-  color: rgb(0, 0, 0);
+  color: rgb(89, 89, 89);
   text-decoration: none;
   scroll-snap-align: center;
-  transition-duration: 100ms;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
   justify-content: center;
 }
 
@@ -80,7 +88,8 @@ scrollbar-width: none; */
 
 .menu-option:focus {
   color: white;
-  transition-duration: 200ms;
+  transition-duration: 300ms;
+  transition-delay: 150ms;
 }
 
 .menu-option:nth-child(1)[aria-checked="true"] .choice-text {
@@ -104,16 +113,16 @@ scrollbar-width: none; */
 .sd-button {
   position: relative;
   display: block;
-  height: 75px;
-  width: 75px;
+  height: 50px;
+  width: 50px;
   cursor: pointer;
   margin: auto auto;
   color: white;
-  background-color: black;
-  outline: solid 2px black;
-  border: solid 2px black;
+  background-color: rgb(255, 255, 255);
+  outline: solid 2px rgb(255, 255, 255);
+  border: solid 2px rgb(255, 255, 255);
   border-radius: 100px;
-  font-size: 3rem;
+  font-size: 2rem;
   transition-duration: 500ms;
   animation: ArrowBob 2s linear infinite;
   padding: 0 0;
@@ -121,7 +130,7 @@ scrollbar-width: none; */
 
 .sd-button:hover {
   transition-duration: 300ms;
-  box-shadow: 0px 0px 0px 25px rgb(0, 0, 0);
+  box-shadow: 0px 0px 0px 20px rgb(255, 255, 255);
   animation: ArrowBloom 1s linear infinite;
   animation: ArrowBob 2s linear infinite;
   font-size: 0rem;
@@ -130,20 +139,26 @@ scrollbar-width: none; */
 .sd-button:active {
   transition-duration: 150ms;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0px 0px 0px 20px rgb(255, 255, 255);
+  box-shadow: 0px 0px 0px 15px rgb(255, 255, 255);
   outline: solid 2px rgb(255, 255, 255);
   border: solid 2px rgb(255, 255, 255);
 }
 
 .back-button {
   padding-bottom: 10px;
-  margin-bottom: 50px;
-  margin-top: 5vh;
+  margin-bottom: 40px;
+  position: absolute;
+  top: 3vh;
+  left: -75px;
+  background-color: rgb(255, 255, 255);
+  outline: solid 2px rgb(255, 255, 255);
+  border: solid 2px rgb(255, 255, 255);
+  color: black;
 }
 
 .choice-page .menu-wrapper {
   width: 90%;
-  height: 83.5vh;
+  height: 90vh;
 }
 
 @keyframes ArrowBob {
@@ -162,11 +177,11 @@ scrollbar-width: none; */
   100% {
   }
   35% {
-    box-shadow: 0px 0px 0px 10px rgb(0, 0, 0);
+    box-shadow: 0px 0px 0px 10px rgb(255, 255, 255);
   }
 
   70% {
-    box-shadow: 0px 0px 0px 5px rgb(0, 0, 0);
+    box-shadow: 0px 0px 0px 5px rgb(255, 255, 255);
   }
 }
 
@@ -175,9 +190,38 @@ scrollbar-width: none; */
   overflow: hidden;
 } */
 
+.select-wrapper {
+  position: relative;
+  display: flex;
+  margin: auto auto;
+  width: 100%;
+  height: 90vh;
+  margin-top: 1.5rem;
+  overflow: hidden;
+}
+
+.select-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto auto;
+  background-color: rgb(26, 26, 26);
+  padding: 2rem 2rem;
+  border-radius: 50px;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  height: 80vh;
+}
+
+.select-container::-webkit-scrollbar {
+  display: none;
+}
+
 .choice-text {
   font-weight: 900;
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: justify;
   word-break: break-all;
+  color: rgb(184, 184, 184);
 }
