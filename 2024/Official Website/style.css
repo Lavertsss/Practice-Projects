@@ -9,6 +9,10 @@ html {
   font-family: "Switzer", sans-serif;
 }
 
+.section-spacing {
+  height: 100vh;
+}
+
 /* overflow-y: auto;
 scroll-snap-type: y mandatory;
 -ms-overflow-style: none;
@@ -55,9 +59,9 @@ scrollbar-width: none; */
   cursor: pointer;
   user-select: none;
   white-space: nowrap;
-  font-size: 7rem;
+  font-size: 5rem;
   font-weight: 900;
-  line-height: 5.5rem;
+  line-height: 4rem;
   color: rgb(0, 0, 0);
   text-decoration: none;
   scroll-snap-align: center;
@@ -133,8 +137,8 @@ scrollbar-width: none; */
 
 .back-button {
   padding-bottom: 10px;
-  margin-bottom: 30px;
-  margin-top: 75vh;
+  margin-bottom: 50px;
+  margin-top: 5vh;
 }
 
 .choice-page .menu-wrapper {
@@ -158,11 +162,11 @@ scrollbar-width: none; */
   100% {
   }
   35% {
-    box-shadow: 0px 0px 0px 20px rgb(0, 0, 0);
+    box-shadow: 0px 0px 0px 10px rgb(0, 0, 0);
   }
 
   70% {
-    box-shadow: 0px 0px 0px 15px rgb(0, 0, 0);
+    box-shadow: 0px 0px 0px 5px rgb(0, 0, 0);
   }
 }
 

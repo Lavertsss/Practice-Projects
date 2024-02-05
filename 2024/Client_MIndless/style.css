@@ -75,7 +75,7 @@ body {
 
 .nav-item {
   font-weight: 400;
-  font-size: 35px;
+  font-size: 2rem;
   color: rgb(255, 255, 255);
   text-decoration: none;
   display: flex;
@@ -87,7 +87,7 @@ body {
 
 .nav-search {
   font-weight: 400;
-  font-size: 35px;
+  font-size: 2rem;
   color: rgb(255, 255, 255);
   text-decoration: none;
   display: flex;
@@ -109,11 +109,11 @@ body {
   border-radius: 30px;
   min-height: 10px;
   font-weight: 300;
-  font-size: 30px;
+  font-size: 2rem;
   border: none;
   font-family: "Passion One", sans-serif;
   margin: auto auto;
-  width: 35px;
+  width: 2.5rem;
   padding-left: 10px;
   overflow: hidden;
   transition-duration: 500ms;
@@ -178,7 +178,7 @@ body {
 }
 
 .content-header {
-  margin-top: 200px;
+  margin-top: 21rem;
   padding-left: 3%;
   padding-right: 3%;
 }
@@ -215,7 +215,7 @@ body {
 
 .sub-title {
   display: flex;
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 400;
   font-weight: 400;
   font-family: "Passion One", sans-serif;
@@ -246,7 +246,7 @@ body {
 
 .button-token {
   display: flex;
-  font-size: 35px;
+  font-size: 2.5rem;
   padding: 1px 20px;
   background-color: rgb(255, 255, 255);
   border: none;
@@ -265,6 +265,7 @@ body {
 .contact-link {
   color: black;
   text-decoration: none;
+  font-size: 2.5rem;
 }
 
 .content-container {
@@ -409,17 +410,17 @@ body {
 }
 
 .works-header {
-  position: fixed;
+  position: relative;
   display: block;
-  margin: 0 auto;
+  margin: auto auto;
+  padding: auto auto;
   text-align: center;
   font-weight: 600;
   font-size: 35px;
   color: rgb(93, 255, 6);
-  padding-left: 15px;
   padding-right: 10px;
-  background-color: rgba(24, 24, 24, 0.84);
-  border-radius: 25px;
+  background-color: rgba(24, 24, 24, 0.961);
+  border-radius: 20px;
 }
 
 .panel {
@@ -518,13 +519,13 @@ body {
   }
 
   99.99% {
-    height: 150px;
+    height: 10rem;
     visibility: visible;
   }
 
   100% {
     visibility: visible;
-    height: auto;
+    height: 10rem;
   }
 }
 
