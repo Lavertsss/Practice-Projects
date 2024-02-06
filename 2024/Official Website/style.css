@@ -4,7 +4,7 @@ body {
 }
 
 html {
-  background-color: rgb(10, 10, 10);
+  background-color: rgb(17, 17, 17);
   overflow: hidden;
   font-family: "Switzer", sans-serif;
 }
@@ -37,16 +37,16 @@ scrollbar-width: none; */
 }
 
 .menu-wrapper {
-  position: relative;
+  position: block;
   display: flex;
   height: auto;
   margin: auto auto;
-  width: 1250px;
   height: 80vh;
   margin-top: 1.5rem;
 }
 
 .menu-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -59,7 +59,27 @@ scrollbar-width: none; */
   font-size: 4.5rem;
 }
 
+.menu-welcome {
+  position: absolute;
+  top: 20%;
+  left: 0%;
+  transform: rotate(40deg);
+  color: white;
+  font-size: 1em;
+  font-weight: 900;
+  line-height: 4rem;
+  text-decoration: line-through solid white 5px;
+  transition-duration: 200ms;
+}
+
+.menu-welcome:hover {
+  text-decoration: line-through solid rgba(255, 255, 255, 0) 4px;
+  transition-duration: 400ms;
+  transition-timing-function: ease-out;
+}
+
 .menu-option {
+  position: absolute;
   display: flex;
   padding: 0 20px;
   margin: 0px 0px;
@@ -96,6 +116,45 @@ scrollbar-width: none; */
   display: none;
 }
 
+#about-selector {
+  bottom: 4%;
+  left: 1%;
+}
+
+#tech-selector {
+  right: 0%;
+  bottom: 15%;
+  writing-mode: sideways-lr;
+}
+
+#github-selector {
+  bottom: 25%;
+  right: 10%;
+  writing-mode: sideways-lr;
+}
+
+#project-selector {
+  right: 10%;
+  bottom: 15%;
+}
+
+#contact-selector {
+  left: 34%;
+  bottom: 25%;
+}
+
+.act-rotater {
+  transform: rotate(270deg);
+  position: absolute;
+  right: -32.5%;
+  bottom: 75%;
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
 .button-wrapper {
   position: relative;
   display: flex;
@@ -185,11 +244,6 @@ scrollbar-width: none; */
   }
 }
 
-/* .menu-option:focus {
-  height: 0px;
-  overflow: hidden;
-} */
-
 .select-wrapper {
   position: relative;
   display: flex;
@@ -211,12 +265,17 @@ scrollbar-width: none; */
   overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  width: 100vw;
   height: 80vh;
 }
 
 .select-container::-webkit-scrollbar {
   display: none;
 }
+
+/* .span-options {
+   visibility: collapse; 
+} */
 
 .choice-text {
   font-weight: 900;
